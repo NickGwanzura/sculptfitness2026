@@ -1,0 +1,7 @@
+{
+  "name": "SCULPT + ASKANA Wellness",
+  "description": "A premium wellness platform and apparel label designed for modern women, focusing on strength, balance, and longevity.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
