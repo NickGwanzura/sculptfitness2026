@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         >
           <Logo
             variant={isMobileMenuOpen ? 'dark' : logoVariant}
-            className={`${isScrolled ? "h-11 lg:h-12" : "h-16 lg:h-18"}`}
+            className={`${isScrolled ? "h-14 lg:h-16" : "h-20 lg:h-24"}`}
           />
         </Link>
 

@@ -24,10 +24,10 @@ function Footerdemo() {
     <footer className="relative border-t border-black/[0.03] bg-white dark:bg-near-black text-dark-text dark:text-ivory transition-colors duration-700">
       <div className="container mx-auto px-8 md:px-12 lg:px-20 py-24 md:py-32 max-w-screen-xl">
         <div className="grid gap-16 lg:grid-cols-3 lg:gap-24">
-          
+
           {/* Brand & Newsletter */}
           <div className="space-y-10">
-            <Logo variant="dark" className="h-10 justify-start dark:invert opacity-80" />
+            <Logo variant="dark" className="h-16 justify-start dark:invert opacity-80" />
             <div className="space-y-6">
               <p className="text-[13px] text-dark-secondary/60 dark:text-ivory/50 font-light leading-relaxed max-w-xs">
                 Receive intentional movement insights and exclusive updates from our private sanctuary.
@@ -67,8 +67,8 @@ function Footerdemo() {
               <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Our Sanctuary</h3>
               <div className="space-y-6 text-sm font-light text-dark-secondary dark:text-ivory/60 leading-relaxed">
                 <p>Harare, Zimbabwe</p>
-                <a href="mailto:tsitsiwashe@sculpt263.com" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">
-                  tsitsiwashe@sculpt263.com
+                <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">
+                  WhatsApp Concierge
                 </a>
               </div>
             </div>
@@ -81,8 +81,11 @@ function Footerdemo() {
                 <a href="#" className="group">
                   <Facebook className="h-5 w-5 text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors" />
                 </a>
+                <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="group">
+                  <span className="text-[10px] items-center flex font-bold tracking-widest text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors">WHATSAPP</span>
+                </a>
               </div>
-              
+
               <div className="flex items-center space-x-3 opacity-40 hover:opacity-100 transition-opacity">
                 <Sun className="h-3.5 w-3.5 text-copper" />
                 <Switch

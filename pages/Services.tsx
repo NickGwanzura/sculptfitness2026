@@ -15,7 +15,7 @@ const Services: React.FC = () => {
         "Joint resilience for life-long mobility",
         "Compound movements mastered with precision"
       ],
-      img: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000"
+      img: "/assets/images/about-squat.jpg"
     },
     {
       title: "Classical Pilates",
@@ -28,7 +28,7 @@ const Services: React.FC = () => {
         "Mindful coordination and breath mastery",
         "Low-impact, high-intensity functional control"
       ],
-      img: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=1000"
+      img: "/assets/images/about-lunge.jpg"
     },
     {
       title: "Wellness Nutrition",

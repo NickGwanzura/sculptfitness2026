@@ -28,7 +28,10 @@ const Contact: React.FC = () => {
 
               <div>
                 <h5 className="text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-bold mb-6 md:mb-10 text-black/40">Inquiries</h5>
-                <p className="text-lg md:text-xl font-light text-dark-secondary leading-relaxed lowercase border-b border-copper/20 inline-block">tsitsiwashe@sculpt263.com</p>
+                <div className="flex flex-col gap-4">
+                  <p className="text-lg md:text-xl font-light text-dark-secondary leading-relaxed lowercase border-b border-copper/20 inline-block w-fit">tsitsiwashe@sculpt263.com</p>
+                  <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl font-light text-copper leading-relaxed border-b border-copper/20 inline-block w-fit hover:opacity-70 transition-opacity">WhatsApp Concierge</a>
+                </div>
               </div>
 
               <div>

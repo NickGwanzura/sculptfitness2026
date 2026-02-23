@@ -10,6 +10,7 @@ import Askana from './pages/Askana';
 import Contact from './pages/Contact';
 import Discovery from './pages/Discovery';
 import AdminDashboard from './pages/AdminDashboard';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 const ScrollEffects = () => {
   const { pathname } = useLocation();
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppWidget />
       </div>
     </HashRouter>
   );
