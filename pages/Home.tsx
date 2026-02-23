@@ -214,7 +214,7 @@ const Home: React.FC = () => {
                 <img
                   src="https://lh3.googleusercontent.com/d/10sNsej_8yHHaK7QmMletlK0Q293JkgT4"
                   alt="Intentional Rhythm"
-                  className="w-full h-full object-cover grayscale transition-all duration-[3s] hover:scale-105"
+                  className="w-full h-full object-contain grayscale transition-all duration-[3s] hover:scale-105"
                 />
               </div>
             </div>
