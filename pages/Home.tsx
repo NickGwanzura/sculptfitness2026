@@ -199,8 +199,8 @@ const Home: React.FC = () => {
       {/* Philosophy Section */}
       <section className="py-32 md:py-60 bg-white border-t border-black/5">
         <div className="max-w-screen-xl mx-auto px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-40 items-center">
-            <div className="lg:col-span-7 reveal order-2 lg:order-1 text-center lg:text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+            <div className="reveal order-2 lg:order-1 text-center lg:text-left">
               <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-10 font-bold">Our Intent</h4>
               <h2 className="text-4xl md:text-8xl font-serif mb-10 leading-[1.1] tracking-tight text-dark-text">
                 Wellness is an <br /><span className="font-light text-copper italic">intentional rhythm.</span>
@@ -209,12 +209,12 @@ const Home: React.FC = () => {
                 We believe strength looks different at every stage. We honor the nuances of your body’s unique transition through professional grace and modern movement.
               </p>
             </div>
-            <div className="lg:col-span-5 reveal order-1 lg:order-2">
-              <div className="aspect-[4/5] bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5">
+            <div className="reveal order-1 lg:order-2">
+              <div className="aspect-[3/4] md:aspect-square bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5">
                 <img
                   src="https://lh3.googleusercontent.com/d/10sNsej_8yHHaK7QmMletlK0Q293JkgT4"
                   alt="Intentional Rhythm"
-                  className="w-full h-full object-contain grayscale transition-all duration-[3s] hover:scale-105"
+                  className="w-full h-full object-cover grayscale transition-all duration-[3s] hover:scale-105"
                 />
               </div>
             </div>

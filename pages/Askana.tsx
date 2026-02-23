@@ -22,8 +22,8 @@ const Askana: React.FC = () => {
 
       {/* Philosophy Editorial */}
       <section className="py-60 container mx-auto px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
-          <div className="lg:col-span-5 reveal">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+          <div className="reveal">
             <h4 className="text-copper text-[10px] tracking-[0.6em] uppercase mb-12 font-bold font-sans">The Ethos</h4>
             <h2 className="text-5xl md:text-8xl font-serif mb-12 leading-tight text-dark-text tracking-tight font-normal">Clothing as <span>Identity</span>.</h2>
             <p className="text-dark-secondary/60 text-xl font-sans font-light leading-relaxed mb-12">
@@ -32,7 +32,7 @@ const Askana: React.FC = () => {
             <div className="h-[1px] w-20 bg-copper mb-12 opacity-30"></div>
             <p className="text-dark-text text-sm tracking-[0.4em] uppercase font-bold font-sans">Est. Harare • 2025</p>
           </div>
-          <div className="lg:col-span-7 grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 gap-10">
             <div className="reveal overflow-hidden aspect-[3/4] mt-24 bg-stone-100 border border-black/5">
               <img src="/assets/images/apparel-identity-1.jpg" className="w-full h-full object-cover grayscale opacity-50 hover:opacity-80 transition-all duration-[2s]" alt="Detail" />
             </div>
