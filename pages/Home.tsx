@@ -98,7 +98,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-white selection:bg-copper selection:text-white min-h-screen transition-colors duration-700 overflow-x-hidden">
       {/* Premium Hero Section */}
-      <section 
+      <section
         className="relative h-screen min-h-[700px] w-full overflow-hidden flex flex-col justify-center"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -110,13 +110,12 @@ const Home: React.FC = () => {
           {slidesToUse.map((slide, index) => (
             <div
               key={slide}
-              className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
-                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                }`}
             >
               <img
                 src={slide}
-                alt="" 
+                alt=""
                 className={`h-full w-full object-cover grayscale-[10%] brightness-[0.75] transition-transform duration-[10s] ease-linear ${index === currentSlide ? 'scale-105' : 'scale-100'}`}
               />
               {/* Refined Overlays */}
@@ -137,7 +136,7 @@ const Home: React.FC = () => {
               Strength & Wellness, <br />
               <span className="font-light text-copper italic">Redefined.</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/70 leading-relaxed font-sans font-light max-w-lg mb-12">
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed font-sans font-light max-w-lg mb-12 drop-shadow-sm">
               A private space where longevity meets lifestyle. Empowering modern women across all seasons of life to move with anatomical precision and radical intention.
             </p>
 
@@ -185,9 +184,8 @@ const Home: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
-                className={`h-0.5 transition-all duration-700 rounded-full ${
-                  idx === currentSlide ? 'w-12 bg-copper' : 'w-6 bg-white/30 hover:bg-white/50'
-                }`}
+                className={`h-0.5 transition-all duration-700 rounded-full ${idx === currentSlide ? 'w-12 bg-copper' : 'w-6 bg-white/30 hover:bg-white/50'
+                  }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
@@ -199,11 +197,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24 md:py-72 bg-white border-t border-black/5">
+      <section className="py-32 md:py-60 bg-white border-t border-black/5">
         <div className="max-w-screen-xl mx-auto px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-40 items-center">
             <div className="lg:col-span-7 reveal order-2 lg:order-1 text-center lg:text-left">
-              <h4 className="text-copper text-[10px] tracking-[0.6em] uppercase mb-10 font-bold">Our Intent</h4>
+              <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-10 font-bold">Our Intent</h4>
               <h2 className="text-4xl md:text-8xl font-serif mb-10 leading-[1.1] tracking-tight text-dark-text">
                 Wellness is an <br /><span className="font-light text-copper italic">intentional rhythm.</span>
               </h2>
@@ -213,10 +211,10 @@ const Home: React.FC = () => {
             </div>
             <div className="lg:col-span-5 reveal order-1 lg:order-2">
               <div className="aspect-[4/5] bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5">
-                <img 
-                  src="https://lh3.googleusercontent.com/d/10sNsej_8yHHaK7QmMletlK0Q293JkgT4" 
-                  alt="Intentional Rhythm" 
-                  className="w-full h-full object-cover grayscale transition-all duration-[3s] hover:scale-105" 
+                <img
+                  src="https://lh3.googleusercontent.com/d/10sNsej_8yHHaK7QmMletlK0Q293JkgT4"
+                  alt="Intentional Rhythm"
+                  className="w-full h-full object-cover grayscale transition-all duration-[3s] hover:scale-105"
                 />
               </div>
             </div>
@@ -225,11 +223,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* Premium Service Cards Section */}
-      <section className="py-24 md:py-40 bg-white">
+      <section className="py-32 md:py-52 bg-white">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8 reveal">
             <div className="max-w-xl text-center md:text-left">
-              <h4 className="text-copper text-[10px] tracking-[0.8em] uppercase mb-8 font-bold">Select Offerings</h4>
+              <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-8 font-bold">Select Offerings</h4>
               <h2 className="text-4xl md:text-6xl font-serif text-dark-text leading-[1.1]">Curated for the art <br />of evolution.</h2>
             </div>
             <Link to="/services" className="text-[10px] tracking-[0.5em] uppercase font-bold border-b border-copper/30 pb-2 hover:border-copper transition-all inline-block w-fit mx-auto md:mx-0">
@@ -239,17 +237,17 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {services.map((service, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="group relative bg-stone-50/50 backdrop-blur-md rounded-2xl border border-black/5 p-8 flex flex-col h-full transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 reveal"
                 style={{ transitionDelay: `${idx * 150}ms` }}
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-copper scale-x-0 transition-transform duration-700 group-hover:scale-x-100 origin-left"></div>
-                
+
                 <div className="aspect-[3/4] mb-10 overflow-hidden rounded-xl bg-stone-100 border border-black/5">
-                  <img 
-                    src={service.img} 
-                    alt={service.title} 
+                  <img
+                    src={service.img}
+                    alt={service.title}
                     className="w-full h-full object-cover grayscale transition-all duration-[2s] group-hover:grayscale-0 group-hover:scale-110"
                   />
                 </div>
@@ -257,7 +255,7 @@ const Home: React.FC = () => {
                 <h3 className="text-2xl md:text-3xl font-serif text-dark-text mb-6 group-hover:text-copper transition-colors duration-500 font-normal">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-dark-secondary/60 text-sm leading-relaxed font-light mb-8 flex-grow">
                   {service.desc}
                 </p>
@@ -276,27 +274,27 @@ const Home: React.FC = () => {
       <section className="relative py-32 md:py-80 text-center overflow-hidden">
         {/* Background Image & Gradient Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://lh3.googleusercontent.com/d/153OYMxFevmBoyqnd_2JZpe-42L4Ersg_" 
-            alt="Evolution Gallery" 
+          <img
+            src="https://lh3.googleusercontent.com/d/153OYMxFevmBoyqnd_2JZpe-42L4Ersg_"
+            alt="Evolution Gallery"
             className="w-full h-full object-cover grayscale brightness-[0.35]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-near-black/70 via-copper/15 to-near-black/90"></div>
         </div>
 
         <div className="max-w-screen-xl mx-auto px-10 relative z-10 reveal">
-           <div className="flex justify-center mb-10 opacity-60 grayscale brightness-[300%]">
-             <Logo className="h-20 md:h-52" />
-           </div>
-           <h2 className="text-4xl md:text-[90px] font-serif mb-16 leading-[1.1] tracking-tight text-white drop-shadow-2xl px-4">
-             Your evolution <br />begins in private.
-           </h2>
-           <Link
-             to="/contact"
-             className="inline-block border border-copper text-copper px-12 py-5 md:py-8 text-[11px] md:text-[12px] tracking-[0.6em] uppercase font-bold hover:bg-copper hover:text-white transition-all duration-1000 backdrop-blur-md bg-white/5"
-           >
-             Inquire Privately
-           </Link>
+          <div className="flex justify-center mb-10 opacity-60 grayscale brightness-[300%]">
+            <Logo className="h-20 md:h-52" />
+          </div>
+          <h2 className="text-4xl md:text-[90px] font-serif mb-16 leading-[1.1] tracking-tight text-white drop-shadow-2xl px-4">
+            Your evolution <br />begins in private.
+          </h2>
+          <Link
+            to="/contact"
+            className="inline-block border border-copper text-copper px-12 py-5 md:py-8 text-[11px] md:text-[12px] tracking-[0.6em] uppercase font-bold hover:bg-copper hover:text-white transition-all duration-1000 backdrop-blur-md bg-white/5"
+          >
+            Inquire Privately
+          </Link>
         </div>
       </section>
     </div>

@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import QuizStepper, { QuizData } from '../components/QuizStepper';
 import { LeadReportData, AssessmentResult } from '../lib/pdf-service';
-import { 
-  MessageCircle, Download, Copy, Check, ExternalLink, 
+import {
+  MessageCircle, Download, Copy, Check, ExternalLink,
   Sparkles, FileText, X, RefreshCcw, HelpCircle, FileCheck
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { 
-  executeLeadFlow, buildWhatsAppLink, 
-  loadLeadFromStorage, copyToClipboard, Lead 
+import {
+  executeLeadFlow, buildWhatsAppLink,
+  loadLeadFromStorage, copyToClipboard, Lead
 } from '../lib/flow-manager';
 
 const Discovery: React.FC = () => {
@@ -34,7 +34,7 @@ const Discovery: React.FC = () => {
     let secondary = "";
     let rationale: string[] = [];
     let weeklyPlan = "";
-    
+
     const isLocal = data.location === 'Harare';
     const wantsPilates = data.pilatesInterest === 'Yes';
     const highSupport = data.accountability === 'Strong support' || data.experience === 'Beginner' || data.trainerLocation === 'Yes, come to me';
@@ -138,7 +138,7 @@ const Discovery: React.FC = () => {
   const handleComplete = async (data: QuizData) => {
     setIsGenerating(true);
     const result = calculateRoute(data);
-    
+
     const lead: Lead = {
       name: data.name,
       phone: data.phone,
@@ -172,84 +172,84 @@ const Discovery: React.FC = () => {
     return (
       <div className="min-h-screen bg-stone-50 flex items-center justify-center p-6 md:p-10 font-sans">
         <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-black/5 animate-fade-up">
-           <div className="p-8 md:p-20 space-y-16">
-              <div className="text-center space-y-4">
-                 <div className="inline-flex items-center gap-2 px-6 py-2 bg-copper/10 rounded-full text-copper text-[10px] tracking-[0.3em] font-bold uppercase mb-4">
-                   <Sparkles className="w-4 h-4" /> Assessment Finished
-                 </div>
-                 <h1 className="text-5xl md:text-7xl font-serif text-dark-text tracking-tighter leading-none italic">Your path is clear.</h1>
-                 <p className="text-dark-secondary/40 text-xs tracking-widest uppercase font-bold">Personal plan for {leadData.name}</p>
+          <div className="p-8 md:p-20 space-y-16">
+            <div className="text-center space-y-4">
+              <div className="inline-flex items-center gap-2 px-6 py-2 bg-copper/10 rounded-full text-copper text-[10px] tracking-[0.3em] font-bold uppercase mb-4">
+                <Sparkles className="w-4 h-4" /> Assessment Finished
               </div>
+              <h1 className="text-5xl md:text-7xl font-serif text-dark-text tracking-tighter leading-none italic">Your path is clear.</h1>
+              <p className="text-dark-secondary/40 text-xs tracking-widest uppercase font-bold">Personal plan for {leadData.name}</p>
+            </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                 <div className="bg-near-black text-white rounded-2xl p-10 space-y-8 flex flex-col justify-between">
-                    <div>
-                       <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">What we recommend</h4>
-                       <h2 className="text-3xl md:text-4xl font-serif text-copper mb-4">{leadData.result.primaryService}</h2>
-                       <p className="text-sm text-white/50 leading-relaxed font-light mb-6">We think this is the best way for you to reach your goal of {leadData.responses.goal}.</p>
-                    </div>
-                    
-                    <div className="border-t border-white/10 pt-8">
-                       <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-2">Weekly Plan</h4>
-                       <p className="text-xl font-serif">{leadData.result.weeklyPlan}</p>
-                    </div>
-                 </div>
-
-                 <div className="space-y-10">
-                    <div className="p-8 bg-stone-50 rounded-2xl border border-black/5">
-                       <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">Why this suits you</h4>
-                       <ul className="space-y-4">
-                          {leadData.result.rationale.slice(0, 3).map((r, i) => (
-                             <li key={i} className="flex gap-4 text-sm font-light text-dark-secondary leading-relaxed">
-                                <span className="w-1.5 h-1.5 bg-copper rounded-full mt-2 shrink-0"></span>
-                                {r}
-                             </li>
-                          ))}
-                       </ul>
-                    </div>
-                    
-                    <div className="flex items-center justify-between p-6 border-b border-black/5">
-                       <div>
-                          <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold">Readiness</h4>
-                          <p className="text-xl font-serif">{leadData.result.readinessLevel}</p>
-                       </div>
-                       <div className="text-right">
-                          <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold">Goal Match</h4>
-                          <p className="text-xl font-serif text-copper">{leadData.result.score}%</p>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-
-              {!hasConfirmedSent ? (
-                <div className="space-y-6 pt-10">
-                   <Button 
-                     onClick={handleFlowAction}
-                     disabled={flowStatus === 'generating'}
-                     className="w-full py-10 bg-copper text-white text-[12px] tracking-[0.4em] uppercase font-bold hover:bg-near-black transition-all flex items-center justify-center gap-4 shadow-2xl shadow-copper/20"
-                   >
-                     {flowStatus === 'generating' ? 'Creating Report...' : 'Download Report + Send on WhatsApp'}
-                   </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="bg-near-black text-white rounded-2xl p-10 space-y-8 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">What we recommend</h4>
+                  <h2 className="text-3xl md:text-4xl font-serif text-copper mb-4">{leadData.result.primaryService}</h2>
+                  <p className="text-sm text-white/50 leading-relaxed font-light mb-6">We think this is the best way for you to reach your goal of {leadData.responses.goal}.</p>
                 </div>
-              ) : (
-                <div className="pt-10 text-center space-y-8 animate-fade-up">
-                  <div className="flex items-center justify-center gap-3 text-green-600">
-                    <FileCheck className="w-6 h-6" />
-                    <span className="text-xs font-bold uppercase tracking-widest">Plan Sent to Tsitsi</span>
+
+                <div className="border-t border-white/10 pt-8">
+                  <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-2">Weekly Plan</h4>
+                  <p className="text-xl font-serif">{leadData.result.weeklyPlan}</p>
+                </div>
+              </div>
+
+              <div className="space-y-10">
+                <div className="p-8 bg-stone-50 rounded-2xl border border-black/5">
+                  <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">Why this suits you</h4>
+                  <ul className="space-y-4">
+                    {leadData.result.rationale.slice(0, 3).map((r, i) => (
+                      <li key={i} className="flex gap-4 text-sm font-light text-dark-secondary leading-relaxed">
+                        <span className="w-1.5 h-1.5 bg-copper rounded-full mt-2 shrink-0"></span>
+                        {r}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex items-center justify-between p-6 border-b border-black/5">
+                  <div>
+                    <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold">Readiness</h4>
+                    <p className="text-xl font-serif">{leadData.result.readinessLevel}</p>
                   </div>
-                  <Button variant="outline" onClick={() => setHasConfirmedSent(false)} className="text-[10px] tracking-widest uppercase py-6 px-10 border-black/5 hover:bg-stone-50">
-                    <RefreshCcw className="w-3 h-3 mr-2" /> Send Again
-                  </Button>
+                  <div className="text-right">
+                    <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold">Goal Match</h4>
+                    <p className="text-xl font-serif text-copper">{leadData.result.score}%</p>
+                  </div>
                 </div>
-              )}
-
-              <div className="pt-12 border-t border-black/5 flex items-start gap-4 text-dark-secondary/40 text-[11px] font-light leading-relaxed italic">
-                 <div className="p-3 bg-stone-50 rounded-full shrink-0"><HelpCircle className="w-4 h-4" /></div>
-                 <p>
-                   <strong>Anti-Forget Protocol:</strong> After the PDF downloads, WhatsApp opens a private chat with Tsitsi. You must manually attach the PDF to complete your inquiry.
-                 </p>
               </div>
-           </div>
+            </div>
+
+            {!hasConfirmedSent ? (
+              <div className="space-y-6 pt-10">
+                <Button
+                  onClick={handleFlowAction}
+                  disabled={flowStatus === 'generating'}
+                  className="w-full py-10 bg-copper text-white text-[12px] tracking-[0.4em] uppercase font-bold hover:bg-near-black transition-all flex items-center justify-center gap-4 shadow-2xl shadow-copper/20"
+                >
+                  {flowStatus === 'generating' ? 'Creating Report...' : 'Download Report + Send on WhatsApp'}
+                </Button>
+              </div>
+            ) : (
+              <div className="pt-10 text-center space-y-8 animate-fade-up">
+                <div className="flex items-center justify-center gap-3 text-green-600">
+                  <FileCheck className="w-6 h-6" />
+                  <span className="text-xs font-bold uppercase tracking-widest">Plan Sent to Tsitsi</span>
+                </div>
+                <Button variant="outline" onClick={() => setHasConfirmedSent(false)} className="text-[10px] tracking-widest uppercase py-6 px-10 border-black/5 hover:bg-stone-50">
+                  <RefreshCcw className="w-3 h-3 mr-2" /> Send Again
+                </Button>
+              </div>
+            )}
+
+            <div className="pt-12 border-t border-black/5 flex items-start gap-4 text-dark-secondary/40 text-[11px] font-light leading-relaxed italic">
+              <div className="p-3 bg-stone-50 rounded-full shrink-0"><HelpCircle className="w-4 h-4" /></div>
+              <p>
+                <strong>Anti-Forget Protocol:</strong> After the PDF downloads, WhatsApp opens a private chat with Tsitsi. You must manually attach the PDF to complete your inquiry.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* --- ANTI-FORGET MODAL --- */}
@@ -295,13 +295,13 @@ const Discovery: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      <main className="pt-32 relative">
+      <main className="pt-32 md:pt-48 relative">
         {isGenerating && (
           <div className="fixed inset-0 z-[3000] bg-white/95 backdrop-blur-md flex items-center justify-center">
-             <div className="text-center space-y-8">
-                <div className="w-20 h-20 border-t-2 border-r-2 border-copper rounded-full animate-spin mx-auto"></div>
-                <h4 className="text-[10px] tracking-[0.8em] uppercase font-bold text-copper animate-pulse">Thinking...</h4>
-             </div>
+            <div className="text-center space-y-8">
+              <div className="w-20 h-20 border-t-2 border-r-2 border-copper rounded-full animate-spin mx-auto"></div>
+              <h4 className="text-[10px] tracking-[0.8em] uppercase font-bold text-copper animate-pulse">Thinking...</h4>
+            </div>
           </div>
         )}
         <QuizStepper onComplete={handleComplete} />

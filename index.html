@@ -1,139 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCULPT | Harare's Premium Wellness & Apparel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400&family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://esm.sh/swiper@11/swiper-bundle.min.css" />
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
-              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCULPT | Harare's Premium Wellness & Apparel</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/sculpt-logo-colored.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://esm.sh/swiper@11/swiper-bundle.min.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
+            sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            'near-black': '#0B0B0B',
+            'ivory': '#F9F7F4',
+            'copper': '#C07A57',
+            'primary-text': '#F4EFEA',
+            'secondary-text': '#CFC7BF',
+            'dark-text': '#1B1B1B',
+            'dark-secondary': '#4A4A4A',
+            stone: {
+              50: '#FAF9F6',
+              100: '#F5F2ED',
+              200: '#E5E2DD',
             },
-            colors: {
-              'near-black': '#0B0B0B',
-              'ivory': '#F9F7F4',
-              'copper': '#C07A57',
-              'primary-text': '#F4EFEA',
-              'secondary-text': '#CFC7BF',
-              'dark-text': '#1B1B1B',
-              'dark-secondary': '#4A4A4A',
-              stone: {
-                50: '#FAF9F6',
-                100: '#F5F2ED',
-                200: '#E5E2DD',
-              },
-              ebony: '#1A1614',
-              gold: '#B5935B',
+            ebony: '#1A1614',
+            gold: '#B5935B',
+          },
+          transitionTimingFunction: {
+            'expo': 'cubic-bezier(0.22, 1, 0.36, 1)',
+          },
+          animation: {
+            'fade-up': 'fadeUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+            'scroll': 'scroll 40s linear infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             },
-            transitionTimingFunction: {
-              'expo': 'cubic-bezier(0.22, 1, 0.36, 1)',
-            },
-            animation: {
-              'fade-up': 'fadeUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards',
-              'scroll': 'scroll 40s linear infinite',
-            },
-            keyframes: {
-              fadeUp: {
-                '0%': { opacity: '0', transform: 'translateY(40px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              scroll: {
-                '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-50%)' },
-              }
+            scroll: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
             }
           }
         }
       }
-    </script>
-    <style>
-        :root {
-          --transition-speed: 0.8s;
-          --nav-h-mobile: 80px;
-          --nav-h-desktop: 120px;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            font-style: normal !important;
-            transition: background-color var(--transition-speed) cubic-bezier(0.22, 1, 0.36, 1), 
-                        color var(--transition-speed) cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Instrument Serif', serif;
-            font-weight: 400;
-            font-style: normal !important;
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        ::-webkit-scrollbar {
-          width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-          background: #FFFFFF;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: #C07A5733;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        /* Global non-italic override */
-        * {
-            font-style: normal !important;
-        }
-        
-        /* Smooth theme transition for interactive elements */
-        a, button, input, select, textarea {
-          transition: all 0.5s ease;
-        }
+    }
+  </script>
+  <style>
+    :root {
+      --transition-speed: 0.5s;
+      --nav-h-mobile: 80px;
+      --nav-h-desktop: 120px;
+    }
 
-        /* Swiper Custom Styles */
-        .swiper-pagination-bullet {
-          background: #C07A57 !important;
-          opacity: 0.3 !important;
-          width: 24px !important;
-          border-radius: 2px !important;
-          height: 2px !important;
-          transition: all 0.5s ease !important;
-        }
-        .swiper-pagination-bullet-active {
-          opacity: 1 !important;
-          width: 48px !important;
-        }
-        .swiper-button-next, .swiper-button-prev {
-          color: white !important;
-          transform: scale(0.6);
-          transition: all 0.3s ease;
-        }
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-          transform: scale(0.8);
-        }
-    </style>
-<script type="importmap">
+    body {
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color var(--transition-speed) cubic-bezier(0.22, 1, 0.36, 1),
+        color var(--transition-speed) cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #FFFFFF;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C07A5733;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Smooth theme transition for interactive elements */
+    a,
+    button,
+    input,
+    select,
+    textarea {
+      transition: all 0.5s ease;
+    }
+
+    /* Swiper Custom Styles */
+    .swiper-pagination-bullet {
+      background: #C07A57 !important;
+      opacity: 0.3 !important;
+      width: 24px !important;
+      border-radius: 2px !important;
+      height: 2px !important;
+      transition: all 0.5s ease !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1 !important;
+      width: 48px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white !important;
+      transform: scale(0.6);
+      transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      transform: scale(0.8);
+    }
+
+    /* Form Placeholder Accessibility */
+    ::placeholder {
+      color: rgba(0, 0, 0, 0.45) !important;
+      font-weight: 400 !important;
+    }
+
+    :-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.45) !important;
+      font-weight: 400 !important;
+    }
+
+    ::-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.45) !important;
+      font-weight: 400 !important;
+    }
+  </style>
+  <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@19.2.3",
@@ -159,8 +195,10 @@
 }
 </script>
 </head>
+
 <body class="antialiased bg-white text-dark-text">
-    <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
 </body>
+
 </html>
