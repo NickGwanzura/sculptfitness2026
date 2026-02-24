@@ -20,7 +20,7 @@ const Services: React.FC = () => {
     {
       title: "Classical Pilates",
       positioning: "The art of anatomical precision.",
-      intro: "Connect to your core through the lens of modern science. Our sessions focus on alignment, breathwork, and deep functional control.",
+      intro: "Connect to your core through the lens of modern science. My sessions focus on alignment, breathwork, and deep functional control.",
       subheading: "Includes",
       bullets: [
         "Spinal health and postural alignment",
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
     {
       title: "Wellness Nutrition",
       positioning: "Sustainable habits without noise.",
-      intro: "Ditch the restriction. We offer culturally resonant, nutrient-dense planning tailored to the demands of a high-performance lifestyle.",
+      intro: "Ditch the restriction. I offer culturally resonant, nutrient-dense planning tailored to the demands of a high-performance lifestyle.",
       subheading: "Best for",
       bullets: [
         "Cognitive clarity and mental performance",
@@ -41,7 +41,7 @@ const Services: React.FC = () => {
         "Gut vitality and inflammation reduction",
         "Seamless integration into busy professional routines"
       ],
-      img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=1000"
+      img: "/assets/images/healthy-meal.png"
     }
   ];
 
@@ -57,12 +57,12 @@ const Services: React.FC = () => {
     <div className="services-section bg-white min-h-screen pb-60">
       {/* Section Wrapper */}
       <header className="pt-32 md:pt-48 pb-24 reveal px-6 md:px-10 max-w-screen-xl mx-auto">
-        <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">Our Offerings</h4>
+        <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">My Offerings</h4>
         <h1 className="text-6xl md:text-9xl font-serif mb-16 leading-[0.9] tracking-tighter text-dark-text font-normal">
           SERVICES
         </h1>
         <p className="text-2xl text-dark-secondary/80 font-light leading-[1.8] max-w-2xl font-sans">
-          Training designed for real results. Our private sessions are rituals of transformation, tailored for the unique seasons of a woman’s life.
+          Training designed for real results. My private sessions are rituals of transformation, tailored for the unique seasons of a woman’s life.
         </p>
       </header>
 

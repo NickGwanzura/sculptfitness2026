@@ -27,10 +27,10 @@ function Footerdemo() {
 
           {/* Brand & Newsletter */}
           <div className="space-y-10">
-            <Logo variant="dark" className="h-16 justify-start dark:invert opacity-80" />
+            <Logo variant="dark" className="h-24 md:h-32 justify-start dark:invert opacity-80" />
             <div className="space-y-6">
               <p className="text-[13px] text-dark-secondary/60 dark:text-ivory/50 font-light leading-relaxed max-w-xs">
-                Receive intentional movement insights and exclusive updates from our private sanctuary.
+                Receive intentional movement insights and exclusive updates.
               </p>
               <form className="relative max-w-xs group">
                 <Input
@@ -48,9 +48,9 @@ function Footerdemo() {
             </div>
           </div>
 
-          {/* Sanctuary Navigation */}
+          {/* Main Navigation */}
           <div>
-            <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Sanctuary</h3>
+            <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Explore</h3>
             <nav className="flex flex-col space-y-5 text-[11px] tracking-[0.2em] uppercase font-bold text-dark-secondary/80 dark:text-ivory/70">
               <a href="#/" className="hover:text-copper transition-colors">Home</a>
               <a href="#/about" className="hover:text-copper transition-colors">The Architect</a>
@@ -64,7 +64,7 @@ function Footerdemo() {
           {/* Contact & Connect */}
           <div className="space-y-12">
             <div>
-              <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Our Sanctuary</h3>
+              <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Location</h3>
               <div className="space-y-6 text-sm font-light text-dark-secondary dark:text-ivory/60 leading-relaxed">
                 <p>Harare, Zimbabwe</p>
                 <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">

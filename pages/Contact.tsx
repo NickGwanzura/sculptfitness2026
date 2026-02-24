@@ -17,12 +17,12 @@ const Contact: React.FC = () => {
             <h4 className="text-copper text-[9px] md:text-[10px] tracking-[0.25em] uppercase mb-12 md:mb-16 font-bold">Concierge</h4>
             <h1 className="text-5xl md:text-[100px] font-serif mb-12 md:mb-20 leading-[1] md:leading-[0.9] tracking-tighter text-dark-text font-normal">Begin your <br />evolution.</h1>
             <p className="text-lg md:text-2xl text-dark-secondary/80 mb-16 md:mb-32 font-light leading-[1.8] max-w-md">
-              Private consultations are held in our studio space. We look forward to welcoming you.
+              Private consultations are held in my studio space. I look forward to welcoming you.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-12 md:gap-24">
               <div>
-                <h5 className="text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-bold mb-6 md:mb-10 text-black/40">Our Harare Studio</h5>
+                <h5 className="text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-bold mb-6 md:mb-10 text-black/40">My Harare Studio</h5>
                 <p className="text-lg md:text-xl font-light text-dark-secondary leading-relaxed">Harare, Zimbabwe</p>
               </div>
 
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                   </div>
                   <h2 className="text-3xl md:text-4xl font-serif mb-8 md:mb-10 text-dark-text font-light">Your inquiry is received.</h2>
                   <p className="text-dark-secondary/50 font-light leading-relaxed text-base md:text-lg mb-12 md:mb-16">
-                    Our Concierge will contact you personally within 24 hours to schedule your private assessment.
+                    I will personally contact you within 24 hours to schedule your private assessment.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
                     Request Access
                   </button>
                   <p className="text-[8px] md:text-[9px] text-center opacity-30 tracking-[0.2em] font-medium uppercase px-4 md:px-12 leading-relaxed mt-8">
-                    By submitting, you agree to our private concierge protocol.
+                    By submitting, you agree to my private concierge protocol.
                   </p>
                 </form>
               )}

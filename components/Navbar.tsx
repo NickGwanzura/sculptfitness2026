@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         >
           <Logo
             variant={isMobileMenuOpen ? 'dark' : logoVariant}
-            className={`${isScrolled ? "h-14 lg:h-16" : "h-20 lg:h-24"}`}
+            className={`${isScrolled ? "h-20 lg:h-24" : "h-32 lg:h-40"}`}
           />
         </Link>
 
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
           <div className="mt-auto grid grid-cols-2 gap-10 border-t border-black/[0.05] pt-12">
             <div className={`transition-all duration-1000 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '700ms' }}>
               <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-copper block mb-4">Location</span>
-              <p className="text-sm text-dark-secondary/60 font-light leading-relaxed">Private Sanctuary<br />Harare, ZW</p>
+              <p className="text-sm text-dark-secondary/60 font-light leading-relaxed">Private Studio<br />Harare, ZW</p>
             </div>
             <div className={`transition-all duration-1000 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '800ms' }}>
               <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-copper block mb-4">Connect</span>

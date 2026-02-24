@@ -45,9 +45,9 @@ const Discovery: React.FC = () => {
       if (highSupport) {
         primary = "Virtual Personal Training";
         rationale = [
-          "Live sessions so your coach can help you stay safe.",
+          "Live sessions so I can help you stay safe.",
           "Perfect for your home or local gym setup.",
-          "High support even though we aren't in the same room."
+          "High support even though I am not in the same room."
         ];
         weeklyPlan = `${capacity} Live Virtual sessions`;
       } else {
@@ -89,7 +89,7 @@ const Discovery: React.FC = () => {
         } else {
           primary = "Studio-Based Pilates (Nuvo Pilates Studio)";
           rationale = [
-            "Work on posture and core strength in our studio.",
+            "Work on posture and core strength in my studio.",
             "A calm and supportive environment to focus on you.",
             "Great for feeling taller and more flexible."
           ];
@@ -184,9 +184,9 @@ const Discovery: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="bg-near-black text-white rounded-2xl p-10 space-y-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">What we recommend</h4>
+                  <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">What I recommend</h4>
                   <h2 className="text-3xl md:text-4xl font-serif text-copper mb-4">{leadData.result.primaryService}</h2>
-                  <p className="text-sm text-white/50 leading-relaxed font-light mb-6">We think this is the best way for you to reach your goal of {leadData.responses.goal}.</p>
+                  <p className="text-sm text-white/50 leading-relaxed font-light mb-6">I think this is the best way for you to reach your goal of {leadData.responses.goal}.</p>
                 </div>
 
                 <div className="border-t border-white/10 pt-8">
@@ -262,7 +262,7 @@ const Discovery: React.FC = () => {
               <div className="space-y-4">
                 <h2 className="text-3xl font-serif text-dark-text">Ready to share?</h2>
                 <p className="text-sm text-dark-secondary/60 leading-relaxed font-light">
-                  Once WhatsApp opens, remember to attach the report we just downloaded:
+                  Once WhatsApp opens, remember to attach the report I just generated:
                 </p>
               </div>
               <div className="space-y-8">

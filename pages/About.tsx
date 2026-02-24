@@ -84,7 +84,7 @@ const About: React.FC = () => {
             {[
               {
                 title: "Strength Over Skinny",
-                desc: "We build muscle, confidence, and a powerful presence."
+                desc: "I build muscle, confidence, and a powerful presence."
               },
               {
                 title: "Mindset First",
@@ -204,7 +204,7 @@ const About: React.FC = () => {
                   "If you’re looking for quick fixes, I may not be your trainer. But if you’re ready for transformation, we’ll work well together."
                 </p>
                 <Link to="/discovery" className="text-copper text-[10px] tracking-[0.4em] uppercase font-bold border-b border-copper/30 pb-2 w-fit hover:border-copper transition-all">
-                  Secure Access to the Sanctuary
+                  Begin Your Evolution
                 </Link>
               </div>
             </div>

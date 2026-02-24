@@ -14,8 +14,9 @@ const SLIDES = [
 
 // High-quality brand assets from Google Drive
 const FALLBACK_SLIDES = [
-  "https://lh3.googleusercontent.com/d/1BfzcOG1khoqmxPqWIH1Q7nN8Wi3Wjgbn",
-  "https://lh3.googleusercontent.com/d/1nHAsy6PBulmdJU3S-iJpUZBj05u6PtZc"
+  "/assets/images/apparel-hero.jpg",
+  "/assets/images/apparel-wrapper.jpg",
+  "/assets/images/apparel-identity-2.jpg"
 ];
 
 const Home: React.FC = () => {
@@ -76,22 +77,22 @@ const Home: React.FC = () => {
     {
       title: "Personal Training",
       desc: "One-on-one sessions prioritizing anatomy, precision, and foundational strength for the decades ahead.",
-      img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/images/about-lunge.jpg",
     },
     {
       title: "Nutrition Coaching",
       desc: "Culturally resonant, nutrient-dense planning tailored to the cognitive and physical demands of high-performance living.",
-      img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/images/healthy-meal.png",
     },
     {
       title: "Wellness Programs",
       desc: "Comprehensive longevity protocols designed for the unique hormonal and physical transitions of womanhood.",
-      img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/images/apparel-identity-1.jpg",
     },
     {
       title: "Mindful Movement",
       desc: "A blend of classical pilates and functional mobility to foster deep coordination and spinal resilience.",
-      img: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/images/about-squat.jpg",
     }
   ];
 
@@ -128,34 +129,11 @@ const Home: React.FC = () => {
 
         {/* Hero Content */}
         <div className="relative z-20 max-w-screen-xl mx-auto px-6 xs:px-10 md:px-12 w-full pt-12 md:pt-20 lg:pt-0">
-          <div className="max-w-2xl animate-fade-up text-left">
-            <span className="inline-block px-5 py-2 rounded-full bg-copper/10 border border-copper/30 text-copper text-[10px] font-bold uppercase tracking-[0.4em] mb-8 backdrop-blur-md">
-              Limited Private Access
-            </span>
-            <h1 className="text-[clamp(2.5rem,8vw,4.5rem)] md:text-[clamp(4rem,7vw,6.5rem)] font-serif leading-[0.95] text-white tracking-tighter font-normal mb-8">
-              Strength & Wellness, <br />
-              <span className="font-light text-copper italic">Redefined.</span>
+          <div className="flex flex-col items-center text-center animate-fade-up">
+            <Logo className="h-40 md:h-[30rem] mb-12 opacity-100 brightness-[100] invert-0" variant="light" />
+            <h1 className="text-[clamp(1.5rem,4vw,2.5rem)] font-serif text-white/90 tracking-[0.4em] uppercase font-light">
+              Strength & Wellness Redefined
             </h1>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed font-sans font-light max-w-lg mb-12 drop-shadow-sm">
-              A private space where longevity meets lifestyle. Empowering modern women across all seasons of life to move with anatomical precision and radical intention.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 w-full sm:w-auto">
-              <Link
-                to="/contact"
-                className="group relative bg-copper w-full sm:w-auto px-12 lg:px-16 py-5 text-[11px] tracking-[0.5em] uppercase font-bold overflow-hidden transition-all duration-700 text-center shadow-2xl shadow-copper/20"
-              >
-                <span className="relative z-10 text-white transition-colors">Book a Session</span>
-                <div className="absolute inset-0 w-0 bg-near-black transition-all duration-700 ease-expo group-hover:w-full"></div>
-              </Link>
-              <Link
-                to="/services"
-                className="group relative px-10 py-3 text-[11px] tracking-[0.5em] uppercase font-bold text-white hover:text-copper transition-all duration-500 text-center w-full sm:w-auto"
-              >
-                <span className="relative z-10">Explore Offerings</span>
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-copper group-hover:w-full transition-all duration-700"></span>
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -201,18 +179,18 @@ const Home: React.FC = () => {
         <div className="max-w-screen-xl mx-auto px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             <div className="reveal order-2 lg:order-1 text-center lg:text-left">
-              <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-10 font-bold">Our Intent</h4>
+              <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-10 font-bold">My Intent</h4>
               <h2 className="text-4xl md:text-8xl font-serif mb-10 leading-[1.1] tracking-tight text-dark-text">
-                Wellness is an <br /><span className="font-light text-copper italic">intentional rhythm.</span>
+                Empowering women <br /><span className="font-light text-copper italic">across all seasons of life.</span>
               </h2>
               <p className="text-dark-secondary/80 leading-relaxed md:leading-[2] text-lg md:text-xl font-light max-w-2xl mx-auto lg:mx-0">
-                We believe strength looks different at every stage. We honor the nuances of your body’s unique transition through professional grace and modern movement.
+                I believe strength looks different at every stage. I honor the nuances of your body’s unique transition through professional grace and intentional movement.
               </p>
             </div>
             <div className="reveal order-1 lg:order-2">
               <div className="aspect-[3/4] md:aspect-square bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5">
                 <img
-                  src="https://lh3.googleusercontent.com/d/10sNsej_8yHHaK7QmMletlK0Q293JkgT4"
+                  src="/assets/images/about-squat.jpg"
                   alt="Intentional Rhythm"
                   className="w-full h-full object-cover grayscale transition-all duration-[3s] hover:scale-105"
                 />
@@ -228,7 +206,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8 reveal">
             <div className="max-w-xl text-center md:text-left">
               <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-8 font-bold">Select Offerings</h4>
-              <h2 className="text-4xl md:text-6xl font-serif text-dark-text leading-[1.1]">Curated for the art <br />of evolution.</h2>
+              <h2 className="text-4xl md:text-6xl font-serif text-dark-text leading-[1.1]">The art of <br />evolution.</h2>
             </div>
             <Link to="/services" className="text-[10px] tracking-[0.5em] uppercase font-bold border-b border-copper/30 pb-2 hover:border-copper transition-all inline-block w-fit mx-auto md:mx-0">
               View All Services
@@ -271,15 +249,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* Final Call */}
-      <section className="relative py-32 md:py-80 text-center overflow-hidden">
+      <section className="relative py-32 md:py-80 text-center overflow-hidden bg-stone-100">
         {/* Background Image & Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://lh3.googleusercontent.com/d/153OYMxFevmBoyqnd_2JZpe-42L4Ersg_"
-            alt="Evolution Gallery"
-            className="w-full h-full object-cover grayscale brightness-[0.35]"
+            src="/assets/images/private-studio-bg.png"
+            alt="Private Studio"
+            className="w-full h-full object-cover brightness-[0.6] opacity-90 transition-all duration-[3s]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-near-black/70 via-copper/15 to-near-black/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-text/40 via-transparent to-dark-text/80"></div>
         </div>
 
         <div className="max-w-screen-xl mx-auto px-10 relative z-10 reveal">
