@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-white pt-24 md:pt-48 pb-32 md:pb-60 min-h-screen">
+    <div className="bg-white pt-36 md:pt-48 pb-32 md:pb-60 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-10">
         {/* Header */}
         <div className="max-w-4xl mb-24 md:mb-48 reveal">
