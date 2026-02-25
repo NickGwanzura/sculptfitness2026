@@ -5,18 +5,13 @@ const Askana: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Apparel Hero */}
-      <section className="h-screen relative flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="h-screen relative flex items-center justify-center text-center overflow-hidden bg-white">
+        <div className="relative z-10 w-full max-w-4xl px-8 animate-fade-up">
           <img
-            src="/assets/images/apparel-hero.jpg"
-            alt="ASKANA Aesthetic"
-            className="w-full h-full object-cover grayscale opacity-40 brightness-75"
+            src="/assets/logos/askana-logo.svg"
+            alt="ASKANA Logo"
+            className="w-full h-auto max-h-[60vh] object-contain mx-auto"
           />
-          <div className="absolute inset-0 bg-near-black/60"></div>
-        </div>
-        <div className="relative z-10 text-white px-8 pt-56 md:pt-[420px] animate-fade-up">
-          <h1 className="text-8xl md:text-[220px] font-serif mb-8 leading-none tracking-tighter opacity-90 font-normal">ASKANA</h1>
-          <p className="text-sm md:text-lg tracking-[0.8em] uppercase font-bold font-sans text-copper italic">Move Boldly</p>
         </div>
       </section>
 
