@@ -18,7 +18,7 @@ const Services: React.FC = () => {
       img: "/assets/images/about-squat.jpg"
     },
     {
-      title: "Classical Pilates",
+      title: "Pilates",
       positioning: "The art of anatomical precision.",
       intro: "Connect to your core through the lens of modern science. My sessions focus on alignment, breathwork, and deep functional control.",
       subheading: "Includes",

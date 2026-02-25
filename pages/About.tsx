@@ -50,10 +50,10 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-10 text-dark-secondary/80 text-lg leading-[1.8] font-sans font-light">
                 <p>
-                  I don’t just train bodies. I build strong women. Fitness has been part of my life since my college years. What started as a personal passion slowly became a calling. Over time, I realized that strength isn’t just physical—it’s mental, emotional, and deeply personal.
+                  I don’t just train bodies, I build strong women. Fitness has been part of my life since my college years. What started as a personal passion slowly became a calling. Over time, I realized that strength isn’t just physical, it’s mental, emotional, and deeply personal.
                 </p>
                 <p>
-                  Motherhood deepened that understanding. It showed me that a woman’s body is powerful beyond measure, and that strength isn’t about perfection—it’s about resilience. That’s the foundation of my coaching.
+                  Motherhood deepened that understanding. It showed me that a woman’s body is powerful beyond measure, and that strength isn’t about perfection, it’s about resilience. That’s the foundation of my coaching.
                 </p>
               </div>
             </div>

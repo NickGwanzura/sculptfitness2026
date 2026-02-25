@@ -80,7 +80,7 @@ const Home: React.FC = () => {
       img: "/assets/images/about-lunge.jpg",
     },
     {
-      title: "Classical Pilates",
+      title: "Pilates",
       desc: "A blend of mindful movement and functional mobility to foster deep coordination and spinal resilience.",
       img: "/assets/images/about-squat.jpg",
     },
@@ -189,7 +189,7 @@ const Home: React.FC = () => {
                 Empowering women <br /><span className="font-light text-copper italic">across all seasons of life.</span>
               </h2>
               <p className="text-dark-secondary/80 leading-relaxed md:leading-[2] text-lg md:text-xl font-light max-w-2xl mx-auto lg:mx-0">
-                I believe strength looks different at every stage. I honor the nuances of your body’s unique transition through professional grace and intentional movement.
+                I believe strength looks different at every stage. I honor the nuances of your body’s unique transition through professional grace, and intentional movement.
               </p>
             </div>
             <div className="reveal order-1 lg:order-2">

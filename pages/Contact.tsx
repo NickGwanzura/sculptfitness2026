@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                       <select className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all font-light text-dark-text appearance-none cursor-pointer">
                         <option value="">Interested In</option>
                         <option value="strength">Strength Training</option>
-                        <option value="pilates">Classical Pilates</option>
+                        <option value="pilates">Pilates</option>
                         <option value="nutrition">Nutrition Planning</option>
                         <option value="apparel">Askana Inquiry</option>
                       </select>
