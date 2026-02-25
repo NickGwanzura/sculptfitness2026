@@ -16,63 +16,18 @@ const Askana: React.FC = () => {
         </div>
         <div className="relative z-10 text-white px-8 pt-56 md:pt-[420px] animate-fade-up">
           <h1 className="text-8xl md:text-[220px] font-serif mb-8 leading-none tracking-tighter opacity-90 font-normal">ASKANA</h1>
-          <p className="text-sm md:text-lg tracking-[0.8em] uppercase font-bold font-sans text-copper">The Apparel Capsule</p>
+          <p className="text-sm md:text-lg tracking-[0.8em] uppercase font-bold font-sans text-copper italic">Move Boldly</p>
         </div>
       </section>
 
-      {/* Philosophy Editorial */}
-      <section className="py-60 container mx-auto px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
-          <div className="reveal">
-            <h4 className="text-copper text-[10px] tracking-[0.6em] uppercase mb-12 font-bold font-sans">The Ethos</h4>
-            <h2 className="text-5xl md:text-8xl font-serif mb-12 leading-tight text-dark-text tracking-tight font-normal">Clothing as <span>Identity</span>.</h2>
-            <p className="text-dark-secondary/60 text-xl font-sans font-light leading-relaxed mb-12">
-              No loud logos. No temporary trends. Just minimal, high-performance pieces designed to support the modern woman from her morning meditation to her evening creative flow.
-            </p>
-            <div className="h-[1px] w-20 bg-copper mb-12 opacity-30"></div>
-            <p className="text-dark-text text-sm tracking-[0.4em] uppercase font-bold font-sans">Est. Harare • 2025</p>
-          </div>
-          <div className="grid grid-cols-2 gap-10">
-            <div className="reveal overflow-hidden aspect-[3/4] mt-24 bg-stone-100 border border-black/5">
-              <img src="/assets/images/apparel-identity-1.jpg" className="w-full h-full object-cover grayscale opacity-50 hover:opacity-80 transition-all duration-[2s]" alt="Detail" />
-            </div>
-            <div className="reveal overflow-hidden aspect-[3/4] mb-24 bg-stone-100 border border-black/5" style={{ transitionDelay: '300ms' }}>
-              <img src="/assets/images/apparel-identity-2.jpg" className="w-full h-full object-cover grayscale opacity-50 hover:opacity-80 transition-all duration-[2s]" alt="Aesthetic" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Collection Showroom */}
-      <section className="py-60 bg-white text-dark-text overflow-hidden border-t border-black/5">
+      {/* Simplified Content */}
+      <section className="py-40 bg-white text-dark-text border-t border-black/5">
         <div className="container mx-auto px-10">
-          <div className="text-center mb-32 reveal">
-            <h4 className="text-copper text-[10px] tracking-[0.8em] uppercase mb-16 font-bold font-sans">Inaugural Release</h4>
-            <h3 className="text-5xl md:text-9xl font-serif mb-12 tracking-tighter opacity-80 text-dark-text font-normal">The Archive Collection</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
-            {[
-              { price: "$120", img: "/assets/images/apparel-leggings.jpg" },
-              { price: "$85", img: "/assets/images/apparel-bra.jpg" },
-              { price: "$145", img: "/assets/images/apparel-wrapper.jpg" }
-            ].map((item, idx) => (
-              <div key={idx} className="group cursor-pointer reveal" style={{ transitionDelay: `${idx * 200}ms` }}>
-                <div className="aspect-[2/3] bg-stone-100 border border-black/5 overflow-hidden mb-10">
-                  <img src={item.img} className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-80 transition-all duration-[2s]" alt="Apparel Item" />
-                </div>
-                <div className="flex justify-end items-baseline">
-                  <span className="text-[10px] opacity-30 font-sans">{item.price}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-40 max-w-3xl mx-auto text-center reveal">
+          <div className="max-w-3xl mx-auto text-center reveal">
             <div className="bg-stone-50 text-dark-text p-16 md:p-24 relative group overflow-hidden border border-black/5">
               <div className="absolute top-0 right-0 w-40 h-40 bg-copper/5 rounded-full blur-3xl"></div>
-              <h4 className="text-4xl md:text-7xl font-serif mb-12 tracking-tight font-light">Private Waiting List</h4>
-              <p className="mb-16 text-dark-secondary/50 font-sans font-light text-lg leading-relaxed">Join our private ledger to receive exclusive early access to the upcoming release.</p>
+              <h4 className="text-4xl md:text-7xl font-serif mb-12 tracking-tight font-light">Waiting List</h4>
+              <p className="mb-16 text-dark-secondary/50 font-sans font-light text-lg leading-relaxed">Join the ledger to receive exclusive early access to the upcoming release.</p>
               <form className="flex flex-col sm:flex-row gap-6" onSubmit={(e) => e.preventDefault()}>
                 <input
                   type="email"

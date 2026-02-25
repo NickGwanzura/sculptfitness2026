@@ -55,9 +55,9 @@ function Footerdemo() {
               <a href="#/" className="hover:text-copper transition-colors">Home</a>
               <a href="#/about" className="hover:text-copper transition-colors">The Architect</a>
               <a href="#/services" className="hover:text-copper transition-colors">Offerings</a>
-              <a href="#/askana" className="hover:text-copper transition-colors">Apparel</a>
+              <a href="#/askana" className="hover:text-copper transition-colors">Askana</a>
               <a href="#/discovery" className="hover:text-copper transition-colors">Discovery</a>
-              <a href="#/contact" className="hover:text-copper transition-colors">Concierge</a>
+              <a href="#/contact" className="hover:text-copper transition-colors">Contact</a>
             </nav>
           </div>
 
@@ -68,7 +68,7 @@ function Footerdemo() {
               <div className="space-y-6 text-sm font-light text-dark-secondary dark:text-ivory/60 leading-relaxed">
                 <p>Harare, Zimbabwe</p>
                 <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">
-                  WhatsApp Concierge
+                  WhatsApp & Calls
                 </a>
               </div>
             </div>
@@ -102,8 +102,10 @@ function Footerdemo() {
 
         {/* Legal Footer */}
         <div className="mt-24 pt-12 border-t border-black/[0.03] dark:border-white/[0.03] flex flex-col md:flex-row items-center justify-between gap-8">
-          <p className="text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20">
-            © 2025 SCULPT WELLNESS. EST. HARARE.
+          <p className="text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20 flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+            <span>© 2025 SCULPT WELLNESS. EST. HARARE.</span>
+            <span className="hidden md:block opacity-30">|</span>
+            <a href="https://wa.me/263777816368" target="_blank" rel="noopener noreferrer" className="text-copper/40 hover:text-copper transition-colors">NT GLOBAL SOLUTIONS</a>
           </p>
           <nav className="flex gap-10 text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20">
             <a href="#" className="hover:text-copper transition-colors">Privacy</a>

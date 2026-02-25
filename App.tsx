@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import Discovery from './pages/Discovery';
 import AdminDashboard from './pages/AdminDashboard';
 import WhatsAppWidget from './components/WhatsAppWidget';
+import SmoothScroll from './components/ui/SmoothScroll';
+import CustomCursor from './components/ui/CustomCursor';
 
 const ScrollEffects = () => {
   const { pathname } = useLocation();
@@ -44,22 +46,25 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <ScrollEffects />
-      <div className="flex flex-col min-h-screen bg-white transition-colors duration-700">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/askana" element={<Askana />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/discovery" element={<Discovery />} />
-            <Route path="/admin" element={<AdminDashboard />} />
-          </Routes>
-        </main>
-        <Footer />
-        <WhatsAppWidget />
-      </div>
+      <SmoothScroll>
+        <div className="flex flex-col min-h-screen bg-white transition-colors duration-700">
+          <CustomCursor />
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/askana" element={<Askana />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/discovery" element={<Discovery />} />
+              <Route path="/admin" element={<AdminDashboard />} />
+            </Routes>
+          </main>
+          <Footer />
+          <WhatsAppWidget />
+        </div>
+      </SmoothScroll>
     </HashRouter>
   );
 };

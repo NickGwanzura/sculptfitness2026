@@ -42,6 +42,32 @@ const Services: React.FC = () => {
         "Seamless integration into busy professional routines"
       ],
       img: "/assets/images/healthy-meal.png"
+    },
+    {
+      title: "Corporate Wellness",
+      positioning: "Performance for Professionals.",
+      intro: "I offer structured corporate wellness experiences designed to improve posture, reduce workplace fatigue, and enhance physical performance for professionals balancing demanding careers and full lives.",
+      subheading: "Key Focus Areas",
+      bullets: [
+        "Mobility and posture refinement",
+        "Workplace fatigue reduction",
+        "Injury prevention and sustainable movement habits",
+        "Customised packages for team wellness objectives"
+      ],
+      img: "/assets/images/corporate-wellness.jpg"
+    },
+    {
+      title: "Wellness Programs",
+      positioning: "Longevity. Hormonal Health.",
+      intro: "Comprehensive longevity protocols designed for the unique hormonal and physical transitions of womanhood. We focus on long-term vitality through evidence-based movement.",
+      subheading: "Focus Areas",
+      bullets: [
+        "Hormonal balance support",
+        "Menopausal transition mobility",
+        "Bone density and metabolic health",
+        "Life-stage specific programming"
+      ],
+      img: "/assets/images/apparel-identity-1.jpg"
     }
   ];
 
@@ -56,7 +82,7 @@ const Services: React.FC = () => {
   return (
     <div className="services-section bg-white min-h-screen pb-60">
       {/* Section Wrapper */}
-      <header className="pt-32 md:pt-48 pb-24 reveal px-6 md:px-10 max-w-screen-xl mx-auto">
+      <header className="pt-24 md:pt-48 pb-16 md:pb-24 reveal px-6 md:px-10 max-w-screen-xl mx-auto">
         <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">My Offerings</h4>
         <h1 className="text-6xl md:text-9xl font-serif mb-16 leading-[0.9] tracking-tighter text-dark-text font-normal">
           SERVICES
@@ -67,7 +93,7 @@ const Services: React.FC = () => {
       </header>
 
       {/* Service Blocks */}
-      <div className="space-y-72 container mx-auto px-6 md:px-10 max-w-screen-xl">
+      <div className="space-y-32 md:space-y-72 container mx-auto px-6 md:px-10 max-w-screen-xl">
         {serviceBlocks.map((service, index) => (
           <article key={index} className={`service-block flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
             <div className="w-full lg:w-1/2 reveal">
@@ -117,7 +143,7 @@ const Services: React.FC = () => {
       </div>
 
       {/* Transformation Process */}
-      <section className="transformation-steps mt-80 py-40 bg-stone-50 border-y border-black/5">
+      <section className="transformation-steps mt-40 md:mt-80 py-40 bg-stone-50 border-y border-black/5">
         <div className="max-w-screen-xl mx-auto px-6 md:px-10">
           <div className="text-center mb-32 reveal">
             <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-8 font-bold font-sans">The Process</h4>
@@ -140,7 +166,7 @@ const Services: React.FC = () => {
       </section>
 
       {/* Services CTA Section */}
-      <section className="services-cta mt-80 text-center reveal px-6">
+      <section className="services-cta mt-40 md:mt-80 text-center reveal px-6">
         <div className="max-w-4xl mx-auto py-32 border border-black/5 bg-stone-50/50 backdrop-blur-sm rounded-3xl px-10 shadow-2xl shadow-copper/5">
           <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">Your evolution begins now.</h4>
           <p className="text-3xl md:text-5xl font-serif text-dark-text mb-16 leading-tight tracking-tight">
@@ -164,11 +190,11 @@ const Services: React.FC = () => {
               to="/askana"
               className="w-full md:w-auto px-16 py-8 bg-near-black text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper transition-all"
             >
-              Apparel Waiting List
+              Askana Waiting List
             </Link>
           </div>
           <p className="mt-12 text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold font-sans">
-            Limited private sessions available in our Harare studio.
+            Limited private sessions available in my studio.
           </p>
         </div>
       </section>

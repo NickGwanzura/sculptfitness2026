@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Apparel', path: '/askana' },
+    { name: 'Askana', path: '/askana' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-[1050] transition-all duration-[800ms] ease-expo ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+      <div className={`fixed inset-0 bg-white/80 backdrop-blur-[30px] z-[1050] transition-all duration-[800ms] ease-expo border-l border-white/20 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         }`}>
         <div className="h-full flex flex-col pt-40 pb-12 px-10 md:px-20">
           <div className="flex flex-col items-start space-y-8">
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-5xl md:text-7xl font-serif tracking-tight leading-none transition-all duration-1000 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+                className={`text-4xl md:text-7xl font-serif tracking-tight leading-none transition-all duration-1000 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
                   } ${location.pathname === link.path ? 'text-copper italic' : 'text-dark-text hover:text-copper'}`}
                 style={{ transitionDelay: `${idx * 100 + 200}ms` }}
                 onClick={() => setIsMobileMenuOpen(false)}

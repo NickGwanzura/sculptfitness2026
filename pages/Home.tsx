@@ -14,7 +14,7 @@ const SLIDES = [
 
 // High-quality brand assets from Google Drive
 const FALLBACK_SLIDES = [
-  "/assets/images/apparel-hero.jpg",
+  "/assets/images/hero-plank.jpg",
   "/assets/images/apparel-wrapper.jpg",
   "/assets/images/apparel-identity-2.jpg"
 ];
@@ -75,12 +75,17 @@ const Home: React.FC = () => {
 
   const services = [
     {
-      title: "Personal Training",
+      title: "Strength Training",
       desc: "One-on-one sessions prioritizing anatomy, precision, and foundational strength for the decades ahead.",
       img: "/assets/images/about-lunge.jpg",
     },
     {
-      title: "Nutrition Coaching",
+      title: "Classical Pilates",
+      desc: "A blend of mindful movement and functional mobility to foster deep coordination and spinal resilience.",
+      img: "/assets/images/about-squat.jpg",
+    },
+    {
+      title: "Wellness Nutrition",
       desc: "Culturally resonant, nutrient-dense planning tailored to the cognitive and physical demands of high-performance living.",
       img: "/assets/images/healthy-meal.png",
     },
@@ -90,9 +95,9 @@ const Home: React.FC = () => {
       img: "/assets/images/apparel-identity-1.jpg",
     },
     {
-      title: "Mindful Movement",
-      desc: "A blend of classical pilates and functional mobility to foster deep coordination and spinal resilience.",
-      img: "/assets/images/about-squat.jpg",
+      title: "Corporate Wellness",
+      desc: "Performance for professionals. Mobility, posture refinement, and sustainable movement habits for the workplace.",
+      img: "/assets/images/corporate-wellness.jpg",
     }
   ];
 
@@ -175,7 +180,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-32 md:py-60 bg-white border-t border-black/5">
+      <section className="py-20 md:py-60 bg-white border-t border-black/5">
         <div className="max-w-screen-xl mx-auto px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             <div className="reveal order-2 lg:order-1 text-center lg:text-left">
@@ -201,8 +206,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Premium Service Cards Section */}
-      <section className="py-32 md:py-52 bg-white">
-        <div className="max-w-screen-xl mx-auto px-6 md:px-10">
+      <section className="py-20 md:py-52 bg-white relative overflow-hidden">
+        {/* Background Watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-serif text-black/[0.02] select-none pointer-events-none tracking-tighter leading-none whitespace-nowrap hidden lg:block uppercase">
+          Sculpt Wellness
+        </div>
+        <div className="max-w-screen-xl mx-auto px-6 md:px-10 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8 reveal">
             <div className="max-w-xl text-center md:text-left">
               <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-8 font-bold">Select Offerings</h4>
@@ -213,11 +222,11 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="group relative bg-stone-50/50 backdrop-blur-md rounded-2xl border border-black/5 p-8 flex flex-col h-full transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 reveal"
+                className="group relative bg-stone-50/50 backdrop-blur-md rounded-2xl border border-black/5 p-8 flex flex-col h-full transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 reveal z-10"
                 style={{ transitionDelay: `${idx * 150}ms` }}
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-copper scale-x-0 transition-transform duration-700 group-hover:scale-x-100 origin-left"></div>
@@ -249,7 +258,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Final Call */}
-      <section className="relative py-32 md:py-80 text-center overflow-hidden bg-stone-100">
+      <section className="relative py-20 md:py-80 text-center overflow-hidden bg-stone-100">
         {/* Background Image & Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img

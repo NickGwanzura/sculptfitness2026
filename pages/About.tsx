@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-white pt-32 md:pt-48 pb-60 min-h-screen">
+    <div className="bg-white pt-24 md:pt-48 pb-32 md:pb-60 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-10">
         {/* Header */}
-        <div className="max-w-4xl mb-48 reveal">
+        <div className="max-w-4xl mb-24 md:mb-48 reveal">
           <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">The Architect</h4>
-          <h1 className="text-7xl md:text-[110px] font-serif mb-16 leading-[0.95] tracking-tight text-dark-text font-normal">
+          <h1 className="text-5xl xs:text-6xl md:text-[110px] font-serif mb-16 leading-[0.95] tracking-tight text-dark-text font-normal">
             ABOUT <span className="font-light text-dark-secondary italic">TSITSI MAPOSA.</span>
           </h1>
           <p className="text-2xl text-dark-secondary/80 font-sans font-light leading-relaxed max-w-3xl">
@@ -17,14 +17,31 @@ const About: React.FC = () => {
           </p>
         </div>
 
+        {/* Empowerment Image Section */}
+        <div className="mb-24 md:mb-48 reveal group overflow-hidden">
+          <div className="relative aspect-[4/5] md:aspect-[16/9] overflow-hidden bg-stone-100 border border-black/5 shadow-2xl transition-transform duration-[3s] group-hover:scale-105">
+            <img
+              src="/assets/images/about-empower.jpg"
+              className="w-full h-full object-cover transition-all duration-[2s]"
+              alt="Empowering women across all seasons of life"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-[2px] transition-all duration-1000 group-hover:bg-black/20 group-hover:backdrop-blur-none">
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-serif text-white text-center leading-tight tracking-tight px-10">
+                Empowering women <br />
+                <span className="italic font-light opacity-90">across all seasons of life.</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
         {/* Introduction Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start mb-72">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start mb-32 md:mb-72">
           <div className="lg:col-span-7 space-y-20">
             <div className="reveal overflow-hidden aspect-[16/9] bg-stone-100 border border-black/5 shadow-2xl">
               <img
-                src="/assets/images/about-squat.jpg"
-                className="w-full h-full object-cover opacity-60 grayscale transition-all duration-[2s]"
-                alt="Strength & Resilience"
+                src="/assets/images/about-profile.jpg"
+                className="w-full h-full object-cover opacity-90 transition-all duration-[2s]"
+                alt="Tsitsi Maposa - Strength Training"
               />
             </div>
             <div className="reveal max-w-2xl" style={{ transitionDelay: '200ms' }}>
@@ -78,7 +95,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Pillars: What I Stand For */}
-        <div className="reveal mb-72">
+        <div className="reveal mb-32 md:mb-72">
           <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-20 font-bold font-sans text-center">What I Stand For</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
             {[
@@ -185,7 +202,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Ideal Partnership */}
-        <div className="mb-72 reveal">
+        <div className="mb-32 md:mb-72 reveal">
           <div className="max-w-4xl mx-auto border-t border-black/5 pt-24">
             <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-16 font-bold font-sans text-center">The Ideal Partnership</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -211,8 +228,43 @@ const About: React.FC = () => {
           </div>
         </div>
 
+        {/* ACE Certificate Section */}
+        <div className="mb-72 reveal">
+          <div className="max-w-4xl mx-auto">
+            <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-16 font-bold font-sans text-center">Professional Validation</h4>
+            <div className="relative group">
+              {/* Overlay to prevent direct interaction */}
+              <div className="absolute inset-0 z-10 pointer-events-auto"
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}></div>
+
+              <div className="aspect-[1.414/1] bg-stone-50 border border-black/5 shadow-2xl overflow-hidden relative">
+                <img
+                  src="/assets/images/ace-certificate.jpg"
+                  alt="ACE Certified Personal Trainer"
+                  className="w-full h-full object-contain select-none"
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  draggable="false"
+                />
+
+                {/* Subtle watermark or branding overlay */}
+                <div className="absolute bottom-8 right-8 text-[10px] tracking-[0.2em] uppercase font-bold text-dark-text/20 select-none pointer-events-none">
+                  SCULPT BY TSITSI MAPOSA
+                </div>
+              </div>
+
+              <div className="mt-8 text-center">
+                <p className="text-dark-secondary/60 text-sm font-light italic">
+                  American Council on Exercise (ACE) Certified Personal Trainer • License Verified
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Final CTA / Beyond the Gym */}
-        <div className="mt-72 text-center reveal">
+        <div className="mt-32 md:mt-72 text-center reveal">
           <div className="max-w-3xl mx-auto py-32 border-y border-black/5 px-10">
             <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">Beyond the Gym</h4>
             <p className="text-2xl font-serif italic text-dark-text mb-16 leading-relaxed">
