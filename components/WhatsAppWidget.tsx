@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const WhatsAppWidget: React.FC = () => {
+    const location = useLocation();
+    if (location.pathname === '/discovery') return null;
     return (
         <a
             href="https://wa.me/263779261868"
