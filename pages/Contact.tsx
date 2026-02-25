@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <MessageCircle className="w-5 h-5 text-copper" />
-                    <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl font-light text-copper leading-relaxed border-b border-copper/20 inline-block w-fit hover:opacity-70 transition-opacity">WhatsApp & Calls</a>
+                    <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl font-light text-copper leading-relaxed border-b border-copper/20 inline-block w-fit hover:opacity-70 transition-opacity">WhatsApp & Calls</a>
                   </div>
                   <div className="flex items-center gap-4">
                     <Instagram className="w-5 h-5 text-copper" />

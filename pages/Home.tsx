@@ -98,6 +98,26 @@ const Home: React.FC = () => {
       title: "Corporate Wellness",
       desc: "Performance for professionals. Mobility, posture refinement, and sustainable movement habits for the workplace.",
       img: "/assets/images/corporate-wellness.jpg",
+    },
+    {
+      title: "1:1 Personal Training (In-Person)",
+      desc: "Focused, hands-on coaching and serious accountability for women ready to build lasting strength.",
+      img: "/assets/images/about-squat.jpg",
+    },
+    {
+      title: "Virtual Training",
+      desc: "Real-time, face-to-face coaching from anywhere. Location flexibility without sacrificing structure.",
+      img: "/assets/images/virtual-training.png",
+    },
+    {
+      title: "Online Coaching",
+      desc: "Professional guidance and accountability on your schedule, wherever you are in the world.",
+      img: "/assets/images/online-coaching.png",
+    },
+    {
+      title: "Small Group Training",
+      desc: "Combining the energy of a community with the intention of results-driven personal programming.",
+      img: "/assets/images/small-group-training.png",
     }
   ];
 
@@ -189,7 +209,7 @@ const Home: React.FC = () => {
                 Empowering women <br /><span className="font-light text-copper italic">across all seasons of life.</span>
               </h2>
               <p className="text-dark-secondary/80 leading-relaxed md:leading-[2] text-lg md:text-xl font-light max-w-2xl mx-auto lg:mx-0">
-                I believe strength looks different at every stage. I honor the nuances of your body’s unique transition through professional grace, and intentional movement.
+                I believe strength looks different at every stage. I honor the nuances of your body’s unique transition through professional grace and intentional movement.
               </p>
             </div>
             <div className="reveal order-1 lg:order-2">

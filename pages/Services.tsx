@@ -68,6 +68,63 @@ const Services: React.FC = () => {
         "Life-stage specific programming"
       ],
       img: "/assets/images/apparel-identity-1.jpg"
+    },
+    {
+      title: "1:1 Personal Training (In-Person)",
+      positioning: "Focused. Hands-on. High accountability.",
+      intro: "For women who want focused, hands-on coaching and serious accountability. This is my most personalized service, where every session is designed around your goals, your body, and your progression.",
+      subheading: "What you can expect",
+      bullets: [
+        "Fully customized training program",
+        "Proper form correction and technique coaching",
+        "Structured programming",
+        "Progress tracking and goal reviews",
+        "High accountability and consistent support"
+      ],
+      img: "/assets/images/about-squat.jpg"
+    },
+    {
+      title: "Virtual Personal Training",
+      positioning: "Live coaching. Anywhere.",
+      intro: "You receive real-time, face-to-face coaching without being physically present. This offers structure and accountability while allowing location flexibility, best for women who travel or prefer training at home.",
+      subheading: "Includes",
+      bullets: [
+        "Live 1:1 video sessions",
+        "Personalized strength programming",
+        "Real-time feedback",
+        "Progressive tracking",
+        "Scheduled accountability"
+      ],
+      img: "/assets/images/virtual-training.png"
+    },
+    {
+      title: "Online Coaching",
+      positioning: "Structure and results with flexibility.",
+      intro: "Online coaching allows you to train on your schedule while still receiving professional guidance and accountability. You train independently, but you are never alone.",
+      subheading: "What's included",
+      bullets: [
+        "Customized training program",
+        "Weekly check-ins",
+        "Progress tracking",
+        "Form review via video submissions",
+        "Habit and mindset guidance",
+        "Ongoing support and communication"
+      ],
+      img: "/assets/images/online-coaching.png"
+    },
+    {
+      title: "Small Group Training",
+      positioning: "Strength in community. Structure in every session.",
+      intro: "Small group training combines the energy of a group environment with the intention of personal programming. Perfect for women who thrive in community but still want results-driven training.",
+      subheading: "You can expect",
+      bullets: [
+        "Structured strength-focused sessions",
+        "Limited group sizes for quality coaching",
+        "Progressive programming",
+        "A motivating, supportive environment",
+        "Accountability and consistency"
+      ],
+      img: "/assets/images/small-group-training.png"
     }
   ];
 
@@ -82,14 +139,11 @@ const Services: React.FC = () => {
   return (
     <div className="services-section bg-white min-h-screen pb-60">
       {/* Section Wrapper */}
-      <header className="pt-24 md:pt-48 pb-16 md:pb-24 reveal px-6 md:px-10 max-w-screen-xl mx-auto">
+      <header className="pt-36 md:pt-48 pb-16 md:pb-24 reveal px-6 md:px-10 max-w-screen-xl mx-auto">
         <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">My Offerings</h4>
         <h1 className="text-6xl md:text-9xl font-serif mb-16 leading-[0.9] tracking-tighter text-dark-text font-normal">
           SERVICES
         </h1>
-        <p className="text-2xl text-dark-secondary/80 font-light leading-[1.8] max-w-2xl font-sans">
-          Training designed for real results. My private sessions are rituals of transformation, tailored for the unique seasons of a woman’s life.
-        </p>
       </header>
 
       {/* Service Blocks */}

@@ -67,7 +67,7 @@ function Footerdemo() {
               <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Location</h3>
               <div className="space-y-6 text-sm font-light text-dark-secondary dark:text-ivory/60 leading-relaxed">
                 <p>Harare, Zimbabwe</p>
-                <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">
+                <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">
                   WhatsApp & Calls
                 </a>
               </div>
@@ -81,7 +81,7 @@ function Footerdemo() {
                 <a href="#" className="group">
                   <Facebook className="h-5 w-5 text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors" />
                 </a>
-                <a href="https://wa.me/263777000000" target="_blank" rel="noopener noreferrer" className="group">
+                <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="group">
                   <span className="text-[10px] items-center flex font-bold tracking-widest text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors">WHATSAPP</span>
                 </a>
               </div>

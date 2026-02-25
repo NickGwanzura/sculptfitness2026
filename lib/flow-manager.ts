@@ -1,9 +1,9 @@
 
 import { generateAssessmentPDF, LeadReportData } from './pdf-service';
 
-export interface Lead extends LeadReportData {}
+export interface Lead extends LeadReportData { }
 
-const WHATSAPP_NUMBER = '263778715908';
+const WHATSAPP_NUMBER = '263779261868';
 
 export const buildWhatsAppLink = (lead: Lead, filename: string): string => {
   const baseMsg = `Hi, I completed the assessment.\n\n*Name:* ${lead.name}\n*Goal:* ${lead.responses.goal}\n*Days per week:* ${lead.responses.daysPerWeek}\n*Recommended plan:* ${lead.result.primaryService}\n\nI’m attaching my PDF report now.`;
@@ -49,15 +49,15 @@ export const copyToClipboard = async (text: string): Promise<void> => {
 };
 
 export const executeLeadFlow = async (
-  lead: Lead, 
+  lead: Lead,
   onStatusUpdate: (status: 'generating' | 'downloaded' | 'opening' | 'blocked') => void
 ): Promise<void> => {
   const filename = `SCULPT_Report_${lead.name.replace(/\s+/g, '_')}.pdf`;
-  
+
   try {
     onStatusUpdate('generating');
     const bytes = await generateAssessmentPDF(lead);
-    
+
     downloadPdf(bytes, filename);
     saveLeadToStorage(lead);
     onStatusUpdate('downloaded');
@@ -67,7 +67,7 @@ export const executeLeadFlow = async (
     onStatusUpdate('opening');
     const waLink = buildWhatsAppLink(lead, filename);
     const win = window.open(waLink, '_blank');
-    
+
     if (!win || win.closed || typeof win.closed === 'undefined') {
       onStatusUpdate('blocked');
     }
