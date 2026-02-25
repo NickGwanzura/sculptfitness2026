@@ -36,8 +36,8 @@ const Navbar: React.FC = () => {
   const logoVariant = isDarkText ? 'dark' : 'light';
 
   return (
-    <nav className={`fixed w-full top-0 left-0 z-[1000] transition-all duration-700 ease-out ${isScrolled
-      ? 'bg-white/95 backdrop-blur-xl py-4 border-b border-black/[0.05] shadow-sm'
+    <nav className={`fixed w-full top-0 left-0 z-[1000] transition-all duration-700 ease-out ${isScrolled || isMobileMenuOpen
+      ? 'bg-white py-4 border-b border-black/[0.05] shadow-sm'
       : 'bg-transparent py-6 lg:py-8'
       }`}>
       <div className="max-w-screen-xl mx-auto px-6 md:px-12 flex justify-between items-center">
