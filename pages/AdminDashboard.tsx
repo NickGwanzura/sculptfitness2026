@@ -17,13 +17,13 @@ interface Application {
 }
 
 const MOCK_APPLICATIONS: Application[] = [
-  { 
-    id: 1, 
-    name: 'Amai Mutasa', 
+  {
+    id: 1,
+    name: 'Amai Mutasa',
     email: 'amai@example.com',
-    goal: 'Mobility & Strength', 
-    readiness: 'Ready now', 
-    date: '2025-05-10', 
+    goal: 'Mobility & Strength',
+    readiness: 'Ready now',
+    date: '2025-05-10',
     status: 'New',
     responses: {
       feeling: 'Strong and independent in my movements.',
@@ -34,17 +34,17 @@ const MOCK_APPLICATIONS: Application[] = [
       fitness: 'Intermediate'
     }
   },
-  { 
-    id: 2, 
-    name: 'Farai Gumbo', 
+  {
+    id: 2,
+    name: 'Farai Gumbo',
     email: 'farai@example.com',
-    goal: 'Postnatal Recovery', 
-    readiness: 'Soon', 
-    date: '2025-05-09', 
+    goal: 'Postnatal Recovery',
+    readiness: 'Soon',
+    date: '2025-05-09',
     status: 'Reviewed',
     responses: {
       feeling: 'Like myself again.',
-      training: ['Reformer Pilates', 'Low-impact'],
+      training: ['Pilates', 'Low-impact'],
       challenge: 'Finding time with a newborn.',
       sessions: '2',
       style: 'Gentle',
@@ -114,7 +114,7 @@ const AdminDashboard: React.FC = () => {
                       </div>
                     </td>
                     <td className="px-10 py-8 text-right">
-                      <Button 
+                      <Button
                         onClick={() => setSelectedApp(app)}
                         variant="ghost" className="text-copper hover:text-copper/70 hover:bg-transparent"
                       >
@@ -133,7 +133,7 @@ const AdminDashboard: React.FC = () => {
       {selectedApp && (
         <div className="fixed inset-0 z-[2000] flex items-center justify-end bg-near-black/60 backdrop-blur-sm p-4 md:p-10">
           <div className="bg-white w-full max-w-2xl h-full rounded-2xl shadow-2xl overflow-y-auto relative animate-fade-up">
-            <button 
+            <button
               onClick={() => setSelectedApp(null)}
               className="absolute top-10 right-10 p-2 hover:bg-stone-100 rounded-full transition-all"
             >
@@ -167,29 +167,29 @@ const AdminDashboard: React.FC = () => {
               </div>
 
               <div className="space-y-10 border-t border-black/5 pt-12">
-                 <div className="space-y-4">
-                    <Label className="text-[10px] uppercase tracking-widest opacity-30">Vision & Intent</Label>
-                    <p className="text-2xl font-serif text-dark-text leading-tight italic">"{selectedApp.responses.feeling}"</p>
-                 </div>
-                 
-                 <div className="space-y-4">
-                    <Label className="text-[10px] uppercase tracking-widest opacity-30">Coaching Style</Label>
-                    <p className="text-lg font-serif text-dark-text">{selectedApp.responses.style || 'Balanced'}</p>
-                 </div>
+                <div className="space-y-4">
+                  <Label className="text-[10px] uppercase tracking-widest opacity-30">Vision & Intent</Label>
+                  <p className="text-2xl font-serif text-dark-text leading-tight italic">"{selectedApp.responses.feeling}"</p>
+                </div>
 
-                 <div className="space-y-4">
-                    <Label className="text-[10px] uppercase tracking-widest opacity-30">Training Interests</Label>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedApp.responses.training.map((t: string) => (
-                        <span key={t} className="px-4 py-2 bg-stone-100 rounded-full text-[9px] uppercase tracking-widest font-bold">{t}</span>
-                      ))}
-                    </div>
-                 </div>
+                <div className="space-y-4">
+                  <Label className="text-[10px] uppercase tracking-widest opacity-30">Coaching Style</Label>
+                  <p className="text-lg font-serif text-dark-text">{selectedApp.responses.style || 'Balanced'}</p>
+                </div>
 
-                 <div className="space-y-4">
-                    <Label className="text-[10px] uppercase tracking-widest opacity-30">Historical Challenges</Label>
-                    <p className="text-lg font-light text-dark-secondary leading-relaxed">{selectedApp.responses.challenge}</p>
-                 </div>
+                <div className="space-y-4">
+                  <Label className="text-[10px] uppercase tracking-widest opacity-30">Training Interests</Label>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedApp.responses.training.map((t: string) => (
+                      <span key={t} className="px-4 py-2 bg-stone-100 rounded-full text-[9px] uppercase tracking-widest font-bold">{t}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <Label className="text-[10px] uppercase tracking-widest opacity-30">Historical Challenges</Label>
+                  <p className="text-lg font-light text-dark-secondary leading-relaxed">{selectedApp.responses.challenge}</p>
+                </div>
               </div>
 
               <div className="pt-12 flex flex-col sm:flex-row gap-4">

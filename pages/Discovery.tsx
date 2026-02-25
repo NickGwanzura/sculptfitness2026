@@ -71,7 +71,7 @@ const Discovery: React.FC = () => {
         weeklyPlan = `${capacity} Home sessions per week`;
       } else if (wantsPilates) {
         if (highSupport || data.injuryStatus !== 'No') {
-          primary = "Private 1:1 Reformer Pilates";
+          primary = "Private 1:1 Pilates";
           rationale = [
             "Focused work on your core and posture.",
             "Safe and gentle if you have aches or injuries.",

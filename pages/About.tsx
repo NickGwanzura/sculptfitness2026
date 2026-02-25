@@ -84,7 +84,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <span className="text-copper font-serif italic text-xl">02</span>
-                  <span>Reformer Pilates Instructor</span>
+                  <span>Pilates Instructor</span>
                 </div>
               </div>
               <p className="text-[10px] uppercase tracking-[0.2em] text-dark-secondary/40 font-bold mt-8">
@@ -143,7 +143,7 @@ const About: React.FC = () => {
             <div className="lg:col-span-5">
               <div className="space-y-12 text-lg text-dark-secondary font-light font-sans">
                 <p className="border-l-2 border-copper/20 pl-8 leading-relaxed">
-                  My approach to women’s training combines progressive strength development with precision-based <span className="text-dark-text font-medium">Reformer Pilates</span>.
+                  My approach to women’s training combines progressive strength development with precision-based <span className="text-dark-text font-medium">Pilates</span>.
                 </p>
                 <div className="grid grid-cols-2 gap-12 pt-8">
                   <div>
