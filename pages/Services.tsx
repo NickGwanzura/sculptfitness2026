@@ -73,7 +73,7 @@ const Services: React.FC = () => {
 
   const steps = [
     { num: "01", title: "Discovery", desc: "Complete the Ledger to align our vision for your evolution." },
-    { num: "02", title: "Assessment", desc: "A private movement and biomechanical analysis held in our private studio space." },
+    { num: "02", title: "Assessment", desc: "A personal movement and biomechanical analysis held in our studio space." },
     { num: "03", title: "Programming", desc: "Drafting your bespoke strength and longevity protocol." },
     { num: "04", title: "Implementation", desc: "Guided sessions prioritizing anatomical integrity and precision." },
     { num: "05", title: "Longevity", desc: "Ongoing refinement to support your evolving seasons of life." }

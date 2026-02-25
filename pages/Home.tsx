@@ -263,7 +263,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/images/private-studio-bg.png"
-            alt="Private Studio"
+            alt="Wellness Studio"
             className="w-full h-full object-cover brightness-[0.6] opacity-90 transition-all duration-[3s]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-text/40 via-transparent to-dark-text/80"></div>

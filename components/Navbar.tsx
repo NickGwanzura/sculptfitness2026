@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white/80 backdrop-blur-[30px] z-[1050] transition-all duration-[800ms] ease-expo border-l border-white/20 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+      <div className={`fixed inset-0 bg-white z-[1050] transition-all duration-[800ms] ease-expo border-l border-white/20 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         }`}>
         <div className="h-full flex flex-col pt-40 pb-12 px-10 md:px-20">
           <div className="flex flex-col items-start space-y-8">
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
           <div className="mt-auto grid grid-cols-2 gap-10 border-t border-black/[0.05] pt-12">
             <div className={`transition-all duration-1000 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '700ms' }}>
               <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-copper block mb-4">Location</span>
-              <p className="text-sm text-dark-secondary/60 font-light leading-relaxed">Private Studio<br />Harare, ZW</p>
+              <p className="text-sm text-dark-secondary/60 font-light leading-relaxed">Harare, ZW</p>
             </div>
             <div className={`transition-all duration-1000 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '800ms' }}>
               <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-copper block mb-4">Connect</span>

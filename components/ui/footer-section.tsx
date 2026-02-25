@@ -105,7 +105,7 @@ function Footerdemo() {
           <p className="text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20 flex flex-col md:flex-row gap-4 md:gap-8 items-center">
             <span>© 2025 SCULPT WELLNESS. EST. HARARE.</span>
             <span className="hidden md:block opacity-30">|</span>
-            <a href="https://wa.me/263777816368" target="_blank" rel="noopener noreferrer" className="text-copper/40 hover:text-copper transition-colors">NT GLOBAL SOLUTIONS</a>
+            <a href="https://wa.me/263777816368" target="_blank" rel="noopener noreferrer" className="text-copper/40 hover:text-copper transition-colors">SITE DEVELOPED BY NT GLOBAL SOLUTIONS</a>
           </p>
           <nav className="flex gap-10 text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20">
             <a href="#" className="hover:text-copper transition-colors">Privacy</a>
