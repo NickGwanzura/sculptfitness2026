@@ -23,7 +23,7 @@ const Askana: React.FC = () => {
             Athleisure for women who move with intention, purpose, and carry confidence beyond the gym.
           </p>
           <div className="flex flex-col items-center gap-6">
-            <span className="text-copper font-bold tracking-[0.3em] uppercase text-sm">Launching March 2026</span>
+            <span className="text-copper font-bold tracking-[0.3em] uppercase text-sm">Launching May 2026</span>
             <button
               onClick={() => document.getElementById('waitlist-form')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-12 py-5 bg-copper text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-white hover:text-near-black transition-all shadow-xl shadow-copper/20"
@@ -91,7 +91,7 @@ const Askana: React.FC = () => {
               <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-8 font-bold font-sans">Be Part of the Launch</h4>
               <h2 className="text-4xl md:text-7xl font-serif mb-10 tracking-tight font-light">Secure Early Access</h2>
               <p className="mb-16 text-dark-secondary/60 font-sans font-light text-xl leading-relaxed max-w-2xl mx-auto">
-                We are opening limited access for the March 2026 launch. Enter your details below to secure your spot. <span className="text-copper italic font-medium">Limited quantities available.</span>
+                We are opening limited access for the May 2026 launch. Enter your details below to secure your spot. <span className="text-copper italic font-medium">Limited quantities available.</span>
               </p>
 
               <form className="flex flex-col gap-8 max-w-2xl mx-auto" onSubmit={(e) => e.preventDefault()}>
