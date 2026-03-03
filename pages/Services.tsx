@@ -202,12 +202,14 @@ const Services: React.FC = () => {
                 </ul>
               </div>
 
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/263779261868"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block border-b border-copper/30 pb-2 text-copper text-[10px] tracking-[0.5em] uppercase font-bold hover:text-dark-text hover:border-dark-text transition-all font-sans"
               >
                 Inquire for Access
-              </Link>
+              </a>
             </div>
           </article>
         ))}
@@ -251,12 +253,14 @@ const Services: React.FC = () => {
             >
               Start Discovery Session
             </Link>
-            <Link
-              to="/contact"
-              className="w-full md:w-auto px-16 py-8 border border-copper text-copper text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper hover:text-white transition-all"
+            <a
+              href="https://wa.me/263779261868"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full md:w-auto px-16 py-8 border border-copper text-copper text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper hover:text-white transition-all text-center"
             >
               Private Inquiry
-            </Link>
+            </a>
             <Link
               to="/askana"
               className="w-full md:w-auto px-16 py-8 bg-near-black text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper transition-all"

@@ -267,10 +267,6 @@ const Home: React.FC = () => {
                   {service.desc}
                 </p>
 
-                <div className="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  <span className="h-[1px] w-8 bg-copper"></span>
-                  <span className="text-[9px] tracking-[0.4em] uppercase font-bold text-copper">Learn More</span>
-                </div>
               </div>
             ))}
           </div>
@@ -296,12 +292,14 @@ const Home: React.FC = () => {
           <h2 className="text-4xl md:text-[90px] font-serif mb-16 leading-[1.1] tracking-tight text-white drop-shadow-2xl px-4">
             Your evolution <br />begins in private.
           </h2>
-          <Link
-            to="/contact"
-            className="inline-block border border-copper text-copper px-12 py-5 md:py-8 text-[11px] md:text-[12px] tracking-[0.6em] uppercase font-bold hover:bg-copper hover:text-white transition-all duration-1000 backdrop-blur-md bg-white/5"
+          <a
+            href="https://wa.me/263779261868"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-copper text-copper px-12 py-5 md:py-8 text-[11px] md:text-[12px] tracking-[0.6em] uppercase font-bold hover:bg-copper hover:text-white transition-all duration-1000 backdrop-blur-md bg-white/5 text-center"
           >
             Inquire Privately
-          </Link>
+          </a>
         </div>
       </section>
     </div>

@@ -57,7 +57,7 @@ function Footerdemo() {
               <a href="#/services" className="hover:text-copper transition-colors">Offerings</a>
               <a href="#/askana" className="hover:text-copper transition-colors">Askana</a>
               <a href="#/discovery" className="hover:text-copper transition-colors">Discovery</a>
-              <a href="#/contact" className="hover:text-copper transition-colors">Contact</a>
+              <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="hover:text-copper transition-colors">Contact</a>
             </nav>
           </div>
 
@@ -110,7 +110,7 @@ function Footerdemo() {
           <nav className="flex gap-10 text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20">
             <a href="#" className="hover:text-copper transition-colors">Privacy</a>
             <a href="#" className="hover:text-copper transition-colors">Terms</a>
-            <a href="#" className="hover:text-copper transition-colors">Contact</a>
+            <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="hover:text-copper transition-colors">Contact</a>
           </nav>
         </div>
       </div>

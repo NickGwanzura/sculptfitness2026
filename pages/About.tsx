@@ -274,9 +274,14 @@ const About: React.FC = () => {
               Ready to build a body that reflects your discipline?
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link to="/contact" className="px-16 py-8 border border-copper text-copper text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper hover:text-white transition-all">
+              <a
+                href="https://wa.me/263779261868"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-16 py-8 border border-copper text-copper text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper hover:text-white transition-all text-center"
+              >
                 Inquire Privately
-              </Link>
+              </a>
               <Link to="/discovery" className="px-16 py-8 bg-near-black text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper transition-all">
                 Begin Assessment
               </Link>
