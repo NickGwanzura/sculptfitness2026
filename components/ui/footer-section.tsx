@@ -75,7 +75,7 @@ function Footerdemo() {
 
             <div className="pt-6 border-t border-black/[0.03] dark:border-white/[0.03] flex items-center justify-between">
               <div className="flex space-x-8">
-                <a href="#" className="group">
+                <a href="https://www.instagram.com/tsitsi_washe?igsh=cW8wbWUybWsybTNn&utm_source=qr" target="_blank" rel="noopener noreferrer" className="group">
                   <Instagram className="h-5 w-5 text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors" />
                 </a>
                 <a href="#" className="group">

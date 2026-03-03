@@ -15,7 +15,8 @@ const Services: React.FC = () => {
         "Joint resilience for life-long mobility",
         "Compound movements mastered with precision"
       ],
-      img: "/assets/images/about-squat.jpg"
+      img: "/assets/images/about-squat.jpg",
+      options: ["1 on One", "Virtual", "Online", "Small Group"]
     },
     {
       title: "Pilates",
@@ -28,7 +29,8 @@ const Services: React.FC = () => {
         "Mindful coordination and breath mastery",
         "Low-impact, high-intensity functional control"
       ],
-      img: "/assets/images/about-lunge.jpg"
+      img: "/assets/images/about-lunge.jpg",
+      options: ["Private Classes", "Group Classes"]
     },
     {
       title: "Wellness Nutrition",
@@ -167,9 +169,24 @@ const Services: React.FC = () => {
               <p className="text-copper text-2xl mb-12 font-light font-serif italic">
                 <strong>{service.positioning}</strong>
               </p>
-              <p className="service-intro text-dark-secondary/80 text-xl mb-16 font-light leading-[1.8] font-sans">
+              <p className="service-intro text-dark-secondary/80 text-xl mb-12 font-light leading-[1.8] font-sans">
                 {service.intro}
               </p>
+
+              {service.options && (
+                <div className="mb-12">
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold mb-6 text-black/20 font-sans">
+                    Options Available
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    {service.options.map((opt, i) => (
+                      <span key={i} className="px-4 py-2 border border-copper/20 rounded-full text-[9px] tracking-[0.2em] uppercase font-bold text-copper/80 bg-copper/[0.02]">
+                        {opt}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="service-list mb-16">
                 <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold mb-10 text-black/20 font-sans">
