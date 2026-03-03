@@ -14,7 +14,7 @@ const Askana: React.FC = () => {
           <img
             src="/assets/logos/askana-logo-raw.png"
             alt="ASKANA Logo"
-            className="w-48 md:w-64 h-auto object-contain mb-12 drop-shadow-2xl brightness-0 invert"
+            className="w-48 md:w-64 h-auto object-contain mt-24 mb-20 drop-shadow-2xl brightness-0 invert"
           />
           <h1 className="text-4xl md:text-7xl font-serif text-white mb-6 tracking-tight">
             Strength in Motion
