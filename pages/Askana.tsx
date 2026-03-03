@@ -6,7 +6,7 @@ const Askana: React.FC = () => {
     <div className="bg-white min-h-screen">
       {/* Apparel Hero */}
       <section
-        className="h-[80vh] relative flex flex-col items-center justify-center text-center overflow-hidden bg-cover bg-center bg-no-repeat"
+        className="h-[80vh] min-h-[600px] relative flex flex-col items-center justify-center text-center overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/assets/images/hero-plank.jpg')" }}
       >
         <div className="absolute inset-0 bg-near-black/60"></div>
@@ -14,7 +14,7 @@ const Askana: React.FC = () => {
           <img
             src="/assets/logos/askana-logo-raw.png"
             alt="ASKANA Logo"
-            className="w-48 md:w-64 h-auto object-contain mt-24 mb-20 drop-shadow-2xl brightness-0 invert"
+            className="w-48 md:w-64 h-auto object-contain mt-32 md:mt-24 mb-10 md:mb-20 drop-shadow-2xl brightness-0 invert"
           />
           <h1 className="text-4xl md:text-7xl font-serif text-white mb-6 tracking-tight">
             Strength in Motion
