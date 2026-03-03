@@ -213,7 +213,7 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className="reveal order-1 lg:order-2">
-              <div className="aspect-[3/4] md:aspect-square bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5">
+              <div className="aspect-[3/4] md:aspect-square bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5 rounded-3xl">
                 <img
                   src="/assets/images/about-squat.jpg"
                   alt="Intentional Rhythm"
@@ -251,7 +251,7 @@ const Home: React.FC = () => {
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-copper scale-x-0 transition-transform duration-700 group-hover:scale-x-100 origin-left"></div>
 
-                <div className="aspect-[3/4] mb-10 overflow-hidden rounded-xl bg-stone-100 border border-black/5">
+                <div className="aspect-[3/4] mb-10 overflow-hidden rounded-2xl bg-stone-100 border border-black/5">
                   <img
                     src={service.img}
                     alt={service.title}

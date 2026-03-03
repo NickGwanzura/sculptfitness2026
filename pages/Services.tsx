@@ -151,7 +151,7 @@ const Services: React.FC = () => {
         {serviceBlocks.map((service, index) => (
           <article key={index} className={`service-block flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
             <div className="w-full lg:w-1/2 reveal">
-              <div className="aspect-[4/5] bg-stone-100 border border-black/5 overflow-hidden shadow-2xl group">
+              <div className="aspect-[4/5] bg-stone-100 border border-black/5 overflow-hidden shadow-2xl group rounded-3xl">
                 <img
                   src={service.img}
                   alt={service.title}
