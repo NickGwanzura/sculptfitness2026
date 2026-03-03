@@ -158,20 +158,18 @@ const Discovery: React.FC = () => {
     await new Promise(r => setTimeout(r, 2000));
     setIsGenerating(false);
     setIsSubmitted(true);
-  };
 
-  const handleFlowAction = async () => {
-    if (!leadData) return;
+    // Auto-trigger flow
     setShowInstructions(true);
-    await executeLeadFlow(leadData, (status) => setFlowStatus(status));
+    await executeLeadFlow(lead, (status) => setFlowStatus(status));
   };
 
   const filename = leadData ? `SCULPT_Report_${leadData.name.replace(/\s+/g, '_')}.pdf` : '';
 
   if (isSubmitted && leadData) {
     return (
-      <div className="min-h-screen bg-stone-50 flex items-center justify-center p-6 md:p-10 font-sans">
-        <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-black/5 animate-fade-up">
+      <div className="min-h-screen bg-stone-50 flex px-6 py-32 md:px-10 md:py-40 font-sans">
+        <div className="max-w-4xl w-full my-auto mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-black/5 animate-fade-up">
           <div className="p-8 md:p-20 space-y-16">
             <div className="text-center space-y-4">
               <div className="inline-flex items-center gap-2 px-6 py-2 bg-copper/10 rounded-full text-copper text-[10px] tracking-[0.3em] font-bold uppercase mb-4">
@@ -224,7 +222,10 @@ const Discovery: React.FC = () => {
             {!hasConfirmedSent ? (
               <div className="space-y-6 pt-10">
                 <Button
-                  onClick={handleFlowAction}
+                  onClick={() => {
+                    setShowInstructions(true);
+                    executeLeadFlow(leadData, (status) => setFlowStatus(status));
+                  }}
                   disabled={flowStatus === 'generating'}
                   className="w-full py-10 bg-copper text-white text-[12px] tracking-[0.4em] uppercase font-bold hover:bg-near-black transition-all flex items-center justify-center gap-4 shadow-2xl shadow-copper/20"
                 >

@@ -5,12 +5,16 @@ const Askana: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Apparel Hero */}
-      <section className="h-screen relative flex items-center justify-center text-center overflow-hidden bg-white">
-        <div className="relative z-10 w-full max-w-4xl px-8 animate-fade-up">
+      <section
+        className="h-[80vh] relative flex items-center justify-center text-center overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/assets/images/hero-plank.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-near-black/50"></div>
+        <div className="relative z-10 w-full max-w-2xl px-8 animate-fade-up">
           <img
-            src="/assets/logos/askana-logo.svg"
+            src="/assets/logos/askana-logo-raw.png"
             alt="ASKANA Logo"
-            className="w-full h-auto max-h-[60vh] object-contain mx-auto"
+            className="w-full h-auto max-h-[50vh] object-contain mx-auto drop-shadow-2xl brightness-0 invert"
           />
         </div>
       </section>

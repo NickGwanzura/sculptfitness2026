@@ -23,7 +23,7 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const { width, height } = page.getSize();
-  
+
   const fontRegular = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
   const fontItalic = await pdfDoc.embedFont(StandardFonts.HelveticaOblique);
@@ -41,8 +41,33 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
   const contentWidth = width - (margin * 2);
 
   // --- HEADER SECTION ---
-  page.drawText('SCULPT + ASKANA', { x: margin, y, size: 22, font: fontBold, color: colors.copper });
-  page.drawText('YOUR WELLNESS PLAN', { x: margin, y: y - 22, size: 9, font: fontRegular, color: colors.gray, characterSpacing: 2 });
+  try {
+    const logoUrl = '/assets/logos/sculpt-logo-colored.png';
+    const logoRes = await fetch(logoUrl);
+    if (!logoRes.ok) throw new Error('Logo fetch failed');
+    const logoBytes = await logoRes.arrayBuffer();
+    const logoImage = await pdfDoc.embedPng(logoBytes);
+
+    // Scale logo appropriately (enlarged)
+    const logoDims = logoImage.scaleToFit(380, 55);
+    // Draw logo centered
+    const logoX = (width - logoDims.width) / 2;
+    page.drawImage(logoImage, {
+      x: logoX,
+      y: y - logoDims.height + 22,
+      width: logoDims.width,
+      height: logoDims.height,
+    });
+  } catch (error) {
+    console.warn('Could not load logo for PDF, falling back to text:', error);
+    const textWidth = fontBold.widthOfTextAtSize('SCULPT', 22);
+    page.drawText('SCULPT', { x: (width - textWidth) / 2, y, size: 22, font: fontBold, color: colors.copper });
+  }
+
+  // Adjust Y down to accommodate larger centered logo
+  y -= 40;
+
+  page.drawText('YOUR WELLNESS PLAN', { x: margin, y: y, size: 9, font: fontRegular, color: colors.gray, characterSpacing: 2 });
   page.drawText(new Date(lead.timestamp).toLocaleDateString().toUpperCase(), { x: width - margin - 80, y, size: 9, font: fontRegular, color: colors.gray });
 
   y -= 50;
@@ -51,21 +76,21 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
   // --- CLIENT PROFILE BLOCK (TINTED) ---
   y -= 40;
   page.drawRectangle({ x: margin, y: y - 75, width: contentWidth, height: 85, color: colors.stone });
-  
+
   let py = y - 20;
   page.drawText('YOUR SUMMARY', { x: margin + 15, y: py + 5, size: 8, font: fontBold, color: colors.copper, characterSpacing: 1 });
   page.drawText(lead.name.toUpperCase(), { x: margin + 15, y: py - 15, size: 14, font: fontBold });
   page.drawText(`${lead.phone}  |  ${lead.email || 'NO EMAIL ON FILE'}`, { x: margin + 15, y: py - 32, size: 9, font: fontRegular, color: colors.gray });
-  
+
   // Readiness Badge
   const badgeW = 100;
   page.drawRectangle({ x: width - margin - badgeW - 15, y: py - 15, width: badgeW, height: 22, color: colors.copper, opacity: 0.1 });
-  page.drawText(lead.result.readinessLevel.toUpperCase(), { 
-    x: width - margin - badgeW + 2, 
-    y: py - 8, 
-    size: 7, 
-    font: fontBold, 
-    color: colors.copper 
+  page.drawText(lead.result.readinessLevel.toUpperCase(), {
+    x: width - margin - badgeW + 2,
+    y: py - 8,
+    size: 7,
+    font: fontBold,
+    color: colors.copper
   });
 
   y -= 110;
@@ -73,7 +98,7 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
   // --- RESULTS SUMMARY SECTION ---
   page.drawText('WHAT YOU TOLD US', { x: margin, y, size: 10, font: fontBold, color: colors.dark });
   y -= 25;
-  
+
   const drawMetric = (label: string, value: string, x: number) => {
     page.drawText(label, { x, y, size: 7, font: fontBold, color: colors.gray, characterSpacing: 1 });
     page.drawText(value, { x, y: y - 14, size: 11, font: fontRegular, color: colors.dark });
@@ -91,7 +116,7 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
 
   page.drawRectangle({ x: margin, y: y - 80, width: contentWidth, height: 90, color: colors.stone, borderColor: colors.copper, borderWidth: 0.5 });
   page.drawText(lead.result.primaryService.toUpperCase(), { x: margin + 20, y: y - 20, size: 16, font: fontBold, color: colors.dark });
-  
+
   if (lead.result.secondaryService) {
     page.drawText(`+ ALSO RECOMMENDED: ${lead.result.secondaryService.toUpperCase()}`, { x: margin + 20, y: y - 38, size: 9, font: fontItalic, color: colors.copper });
   }
@@ -113,7 +138,7 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
   };
 
   drawSection('WHY THIS SUITS YOU', lead.result.rationale);
-  
+
   const constraintNotes = [];
   if (lead.responses.injuries !== 'No' && lead.responses.injuries !== 'None') {
     constraintNotes.push(`We noticed you mentioned: ${lead.responses.injuries}`);
@@ -128,7 +153,7 @@ export async function generateAssessmentPDF(lead: LeadReportData): Promise<Uint8
   page.drawLine({ start: { x: margin, y }, end: { x: width - margin, y }, thickness: 0.5, color: colors.divider });
   y -= 25;
   page.drawText('NEXT STEP: ATTACH THIS PDF TO YOUR WHATSAPP MESSAGE SO WE CAN TALK ABOUT YOUR START DATE.', { x: margin, y, size: 8, font: fontBold, color: colors.copper, characterSpacing: 1 });
-  
+
   y -= 15;
   page.drawText('This report is for your information. We will confirm everything during your first private session.', {
     x: margin,
