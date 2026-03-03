@@ -55,19 +55,30 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-14">
           {navLinks.map((link) => (
-            <a
-              key={link.path}
-              href={link.path === '/contact' ? 'https://wa.me/263779261868' : link.path}
-              target={link.path === '/contact' ? '_blank' : undefined}
-              rel={link.path === '/contact' ? 'noopener noreferrer' : undefined}
-              className={`text-[11px] tracking-[0.25em] uppercase font-bold transition-all duration-500 hover:text-copper relative group ${location.pathname === link.path
-                ? 'text-copper'
-                : isDarkText ? 'text-dark-text' : 'text-white'
-                }`}
-            >
-              {link.name}
-              <span className={`absolute -bottom-1.5 left-0 w-0 h-[1px] bg-copper/40 transition-all duration-500 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
-            </a>
+            link.path === '/contact' ? (
+              <a
+                key={link.path}
+                href="https://wa.me/263779261868"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-[11px] tracking-[0.25em] uppercase font-bold transition-all duration-500 hover:text-copper relative group ${isDarkText ? 'text-dark-text' : 'text-white'}`}
+              >
+                {link.name}
+                <span className="absolute -bottom-1.5 left-0 w-0 h-[1px] bg-copper/40 transition-all duration-500 group-hover:w-full"></span>
+              </a>
+            ) : (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-[11px] tracking-[0.25em] uppercase font-bold transition-all duration-500 hover:text-copper relative group ${location.pathname === link.path
+                  ? 'text-copper'
+                  : isDarkText ? 'text-dark-text' : 'text-white'
+                  }`}
+              >
+                {link.name}
+                <span className={`absolute -bottom-1.5 left-0 w-0 h-[1px] bg-copper/40 transition-all duration-500 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
+              </Link>
+            )
           ))}
 
           <Link
@@ -101,18 +112,31 @@ const Navbar: React.FC = () => {
         <div className="h-full flex flex-col pt-40 pb-12 px-10 md:px-20">
           <div className="flex flex-col items-start space-y-8">
             {navLinks.map((link, idx) => (
-              <a
-                key={link.path}
-                href={link.path === '/contact' ? 'https://wa.me/263779261868' : link.path}
-                target={link.path === '/contact' ? '_blank' : undefined}
-                rel={link.path === '/contact' ? 'noopener noreferrer' : undefined}
-                className={`text-4xl md:text-7xl font-serif tracking-tight leading-none transition-all duration-1000 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
-                  } ${location.pathname === link.path ? 'text-copper italic' : 'text-dark-text hover:text-copper'}`}
-                style={{ transitionDelay: `${idx * 100 + 200}ms` }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+              link.path === '/contact' ? (
+                <a
+                  key={link.path}
+                  href="https://wa.me/263779261868"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-4xl md:text-7xl font-serif tracking-tight leading-none transition-all duration-1000 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+                    } text-dark-text hover:text-copper`}
+                  style={{ transitionDelay: `${idx * 100 + 200}ms` }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-4xl md:text-7xl font-serif tracking-tight leading-none transition-all duration-1000 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+                    } ${location.pathname === link.path ? 'text-copper italic' : 'text-dark-text hover:text-copper'}`}
+                  style={{ transitionDelay: `${idx * 100 + 200}ms` }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 

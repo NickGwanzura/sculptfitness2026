@@ -20,17 +20,41 @@ const Services: React.FC = () => {
     },
     {
       title: "Pilates",
-      positioning: "The art of anatomical precision.",
-      intro: "Connect to your core through the lens of modern science. My sessions focus on alignment, breathwork, and deep functional control.",
-      subheading: "Includes",
+      positioning: "Control. Precision. Sculpted strength.",
+      intro: "Pilates complement strength training by improving core stability, muscle control, flexibility, and postural strength. It enhances your overall performance and helps sculpt lean, defined muscle.",
+      subheading: "Pilates Benefits",
       bullets: [
-        "Spinal health and postural alignment",
-        "Deep core fluidity and abdominal strength",
-        "Mindful coordination and breath mastery",
-        "Low-impact, high-intensity functional control"
+        "Core stability & Muscle control",
+        "Flexibility & Range of motion",
+        "Postural strength & alignment",
+        "Injury prevention & recovery",
+        "Muscle definition & sculpting"
       ],
       img: "/assets/images/about-lunge.jpg",
-      options: ["Private Classes", "Group Classes"]
+      extraSections: [
+        {
+          title: "Studio-Based Pilates",
+          content: "Experience professional studio-based Pilates as part of your strength journey. Reformer Pilates enhances core stability, muscular control, posture, and movement precision, making it a powerful complement to structured strength training.",
+          note: "Studio-based sessions are available as an additional investment separate from your primary training package. Studio rates apply accordingly."
+        },
+        {
+          title: "Small Group Reformer Classes",
+          content: "Small group sessions offer a focused, supportive environment while maintaining professional structure and progression. Ideal for those who enjoy shared energy while refining technique."
+        },
+        {
+          title: "Private 1:1 Reformer Pilates",
+          content: "For clients seeking maximum precision and accelerated results, private sessions provide individualized attention and detailed correction.",
+          highlights: [
+            "Personalized programming",
+            "Deeper postural assessment",
+            "Targeted core and sculpt work",
+            "Faster technical progression"
+          ],
+          note: "Private sessions are particularly recommended for beginners, clients working through imbalances, or those wanting a more elevated and focused experience."
+        }
+      ],
+      footerNote: "For optimal results, I recommend incorporating Reformer Pilates at least twice per week alongside your strength training. Consistency in both modalities enhances overall performance, control, and long-term results.",
+      footerAlert: "Availability is limited and subject to studio scheduling."
     },
     {
       title: "Wellness Nutrition",
@@ -201,6 +225,41 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
               </div>
+
+              {service.extraSections && (
+                <div className="space-y-16 mb-16 border-t border-black/5 pt-16">
+                  {service.extraSections.map((section, si) => (
+                    <div key={si} className="space-y-6">
+                      <h4 className="text-xl font-serif text-dark-text italic font-medium">{section.title}</h4>
+                      <p className="text-sm text-dark-secondary/70 leading-relaxed font-light">{section.content}</p>
+                      {section.highlights && (
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                          {section.highlights.map((h, hi) => (
+                            <li key={hi} className="flex items-center gap-3 text-xs text-dark-secondary/60">
+                              <span className="w-1 h-1 bg-copper/30 rounded-full"></span>
+                              {h}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {section.note && (
+                        <p className="text-xs text-copper/60 italic font-light font-sans">{section.note}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {service.footerNote && (
+                <div className="mb-12 p-8 bg-stone-50 border-l border-copper/30">
+                  <p className="text-sm text-dark-secondary/80 font-light leading-relaxed mb-4 italic">
+                    {service.footerNote}
+                  </p>
+                  {service.footerAlert && (
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-copper/40">{service.footerAlert}</p>
+                  )}
+                </div>
+              )}
 
               <a
                 href="https://wa.me/263779261868"
