@@ -34,15 +34,15 @@ const Services: React.FC = () => {
       extraSections: [
         {
           title: "Studio-Based Pilates",
-          content: "Experience professional studio-based Pilates as part of your strength journey. Reformer Pilates enhances core stability, muscular control, posture, and movement precision, making it a powerful complement to structured strength training.",
+          content: "Experience professional studio-based Pilates as part of your strength journey. Pilates enhances core stability, muscular control, posture, and movement precision, making it a powerful complement to structured strength training.",
           note: "Studio-based sessions are available as an additional investment separate from your primary training package. Studio rates apply accordingly."
         },
         {
-          title: "Small Group Reformer Classes",
+          title: "Small Group Pilates Classes",
           content: "Small group sessions offer a focused, supportive environment while maintaining professional structure and progression. Ideal for those who enjoy shared energy while refining technique."
         },
         {
-          title: "Private 1:1 Reformer Pilates",
+          title: "Private 1:1 Pilates",
           content: "For clients seeking maximum precision and accelerated results, private sessions provide individualized attention and detailed correction.",
           highlights: [
             "Personalized programming",
@@ -53,7 +53,7 @@ const Services: React.FC = () => {
           note: "Private sessions are particularly recommended for beginners, clients working through imbalances, or those wanting a more elevated and focused experience."
         }
       ],
-      footerNote: "For optimal results, I recommend incorporating Reformer Pilates at least twice per week alongside your strength training. Consistency in both modalities enhances overall performance, control, and long-term results.",
+      footerNote: "For optimal results, I recommend incorporating Pilates at least twice per week alongside your strength training. Consistency in both modalities enhances overall performance, control, and long-term results.",
       footerAlert: "Availability is limited and subject to studio scheduling."
     },
     {
