@@ -184,7 +184,6 @@ const Discovery: React.FC = () => {
                 <div>
                   <h4 className="text-[10px] uppercase tracking-widest opacity-40 font-bold mb-6">What I recommend</h4>
                   <h2 className="text-3xl md:text-4xl font-serif text-copper mb-4">{leadData.result.primaryService}</h2>
-                  <p className="text-sm text-white/50 leading-relaxed font-light mb-6">I think this is the best way for you to reach your goal of {leadData.responses.goal}.</p>
                 </div>
 
                 <div className="border-t border-white/10 pt-8">
