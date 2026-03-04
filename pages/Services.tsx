@@ -5,29 +5,29 @@ import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const serviceBlocks = [
     {
-      title: "Strength Training & 1:1 Coaching",
-      positioning: "Foundational. Longevity-focused. High accountability.",
-      intro: "An intentional approach to resistance training designed for bone density, metabolic vitality, and a confidently sculpted physique. Combined with focused, hands-on coaching where every session is designed around your goals, your body, and your progression.",
+      title: "1:1 Personal Training (In-Person)",
+      positioning: "Focused, hands-on coaching and serious accountability.",
+      intro: "This is my most personalized service. Every session is designed around your goals, your body, and your progression. For individuals who want focused, hands-on coaching and serious accountability.",
       subheading: "What you can expect",
       bullets: [
+        "Fully customized training program",
         "Proper form correction and technique coaching",
-        "Structural Integrity and skeletal support",
-        "Hormonal health and metabolic optimization",
-        "Joint resilience for life-long mobility",
-        "Compound movements mastered with precision",
-        "Structured programming and goal reviews"
+        "Structured programming",
+        "Progress tracking and goal reviews",
+        "High accountability and consistent support"
       ],
       img: "/assets/images/about-squat.jpg",
       options: ["1 on One", "In-Person"]
     },
     {
       title: "Virtual & Online Coaching",
-      positioning: "Live coaching. Structure with flexibility.",
-      intro: "Receive real-time, face-to-face coaching or train on your own schedule with professional guidance. Perfect for women who travel or prefer training at home while still receiving serious accountability.",
+      positioning: "Live coaching. Anywhere. Structure and results with flexibility.",
+      intro: "You receive real-time, face-to-face coaching without being physically present, or train on your schedule while still receiving professional guidance and accountability. Perfect for busy professionals, moms, or anyone outside my immediate location.",
       subheading: "Includes",
       bullets: [
-        "Live 1:1 video sessions or customized programs",
-        "Real-time feedback and video form reviews",
+        "Live 1:1 video sessions",
+        "Personalized strength programming",
+        "Real-time feedback & video form reviews",
         "Weekly check-ins and progress tracking",
         "Habit and mindset guidance",
         "Ongoing support and communication"
@@ -38,7 +38,7 @@ const Services: React.FC = () => {
     {
       title: "Small Group Training",
       positioning: "Strength in community. Structure in every session.",
-      intro: "Small group training combines the energy of a group environment with the intention of personal programming. Perfect for women who thrive in community but still want results-driven training.",
+      intro: "Small group training combines the energy of a group environment with the intention of personal programming. Perfect for individuals who thrive in community but still want results-driven training.",
       subheading: "You can expect",
       bullets: [
         "Structured strength-focused sessions",
@@ -51,7 +51,7 @@ const Services: React.FC = () => {
       options: ["Small Group"]
     },
     {
-      title: "Pilates",
+      title: "Studio-Based Pilates",
       positioning: "Control. Precision. Sculpted strength.",
       intro: "Pilates complement strength training by improving core stability, muscle control, flexibility, and postural strength. It enhances your overall performance and helps sculpt lean, defined muscle.",
       subheading: "Pilates Benefits",
@@ -70,22 +70,21 @@ const Services: React.FC = () => {
           note: "Studio-based sessions are available as an additional investment separate from your primary training package. Studio rates apply accordingly."
         },
         {
-          title: "Small Group Pilates Classes",
-          content: "Small group sessions offer a focused, supportive environment while maintaining professional structure and progression. Ideal for those who enjoy shared energy while refining technique."
+          title: "Small Group Reformer Classes",
+          content: "Small group sessions offer a focused, supportive environment while maintaining professional structure and progression. Ideal for women who enjoy shared energy while refining technique."
         },
         {
-          title: "Private 1:1 Pilates",
-          content: "For clients seeking maximum precision and accelerated results, private sessions provide individualized attention and detailed correction.",
+          title: "Private 1:1 Reformer Pilates",
+          content: "For clients seeking maximum precision and accelerated results, private sessions provide individualized attention and detailed correction. Particularly recommended for beginners, clients working through imbalances, or those wanting a more elevated experience.",
           highlights: [
             "Personalized programming",
             "Deeper postural assessment",
             "Targeted core and sculpt work",
             "Faster technical progression"
-          ],
-          note: "Private sessions are particularly recommended for beginners, clients working through imbalances, or those wanting a more elevated and focused experience."
+          ]
         }
       ],
-      footerNote: "For optimal results, I recommend incorporating Pilates at least twice per week alongside your strength training. Consistency in both modalities enhances overall performance, control, and long-term results.",
+      footerNote: "For optimal results, I recommend incorporating Pilates at least once per week alongside your strength training. Consistency in both modalities enhances overall performance, control, and long-term results.",
       footerAlert: "Availability is limited and subject to studio scheduling."
     },
     {
@@ -118,21 +117,25 @@ const Services: React.FC = () => {
   ];
 
   const steps = [
-    { num: "01", title: "Discovery", desc: "Complete the Ledger to align our vision for your evolution." },
-    { num: "02", title: "Assessment", desc: "A personal movement and biomechanical analysis held in our studio space." },
-    { num: "03", title: "Programming", desc: "Drafting your bespoke strength and longevity protocol." },
-    { num: "04", title: "Implementation", desc: "Guided sessions prioritizing anatomical integrity and precision." },
-    { num: "05", title: "Longevity", desc: "Ongoing refinement to support your evolving seasons of life." }
+    { num: "01", title: "Consultation", desc: "We assess your goals, experience, and lifestyle." },
+    { num: "02", title: "Strategy", desc: "I design a structured program aligned with your body and objectives." },
+    { num: "03", title: "Execution", desc: "We train with purpose and progression." },
+    { num: "04", title: "Accountability & Tracking", desc: "Your progress is monitored and adjusted." },
+    { num: "05", title: "Elevation", desc: "As you grow stronger, we evolve your programming." }
   ];
 
   return (
     <div className="services-section bg-white min-h-screen pb-60">
       {/* Section Wrapper */}
       <header className="pt-36 md:pt-48 pb-16 md:pb-24 reveal px-6 md:px-10 max-w-screen-xl mx-auto">
-        <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">My Offerings</h4>
+        <h4 className="text-copper text-[10px] tracking-[0.25em] uppercase mb-12 font-bold font-sans">Training Designed for Real Results</h4>
         <h1 className="text-6xl md:text-9xl font-serif mb-16 leading-[0.9] tracking-tighter text-dark-text font-normal">
           SERVICES
         </h1>
+        <p className="max-w-2xl text-dark-secondary/80 text-xl font-light leading-relaxed font-sans">
+          Whether you prefer hands-on coaching or flexible online support, every service
+          I offer is built around real transformation.
+        </p>
       </header>
 
       {/* Service Blocks */}
@@ -273,7 +276,7 @@ const Services: React.FC = () => {
               to="/discovery"
               className="w-full md:w-auto px-16 py-8 bg-copper text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-near-black transition-all shadow-xl shadow-copper/20"
             >
-              Start Discovery Session
+              Book Your Consultation
             </Link>
             <a
               href="https://wa.me/263779261868"
@@ -281,13 +284,13 @@ const Services: React.FC = () => {
               rel="noopener noreferrer"
               className="w-full md:w-auto px-16 py-8 border border-copper text-copper text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper hover:text-white transition-all text-center"
             >
-              Private Inquiry
+              Apply for Coaching
             </a>
             <Link
               to="/askana"
               className="w-full md:w-auto px-16 py-8 bg-near-black text-white text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-copper transition-all"
             >
-              Askana Waiting List
+              Secure Your Spot
             </Link>
           </div>
           <p className="mt-12 text-[9px] tracking-[0.4em] uppercase opacity-30 font-bold font-sans">
