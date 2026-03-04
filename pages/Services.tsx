@@ -5,18 +5,50 @@ import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const serviceBlocks = [
     {
-      title: "Strength Training",
-      positioning: "Foundational. Longevity-focused.",
-      intro: "An intentional approach to resistance training designed for bone density, metabolic vitality, and a confidently sculpted physique.",
+      title: "Strength Training & 1:1 Coaching",
+      positioning: "Foundational. Longevity-focused. High accountability.",
+      intro: "An intentional approach to resistance training designed for bone density, metabolic vitality, and a confidently sculpted physique. Combined with focused, hands-on coaching where every session is designed around your goals, your body, and your progression.",
       subheading: "What you can expect",
       bullets: [
+        "Proper form correction and technique coaching",
         "Structural Integrity and skeletal support",
         "Hormonal health and metabolic optimization",
         "Joint resilience for life-long mobility",
-        "Compound movements mastered with precision"
+        "Compound movements mastered with precision",
+        "Structured programming and goal reviews"
       ],
       img: "/assets/images/about-squat.jpg",
-      options: ["1 on One", "Virtual", "Online", "Small Group"]
+      options: ["1 on One", "In-Person"]
+    },
+    {
+      title: "Virtual & Online Coaching",
+      positioning: "Live coaching. Structure with flexibility.",
+      intro: "Receive real-time, face-to-face coaching or train on your own schedule with professional guidance. Perfect for women who travel or prefer training at home while still receiving serious accountability.",
+      subheading: "Includes",
+      bullets: [
+        "Live 1:1 video sessions or customized programs",
+        "Real-time feedback and video form reviews",
+        "Weekly check-ins and progress tracking",
+        "Habit and mindset guidance",
+        "Ongoing support and communication"
+      ],
+      img: "/assets/images/virtual-training.png",
+      options: ["Virtual", "Online"]
+    },
+    {
+      title: "Small Group Training",
+      positioning: "Strength in community. Structure in every session.",
+      intro: "Small group training combines the energy of a group environment with the intention of personal programming. Perfect for women who thrive in community but still want results-driven training.",
+      subheading: "You can expect",
+      bullets: [
+        "Structured strength-focused sessions",
+        "Limited group sizes for quality coaching",
+        "Progressive programming",
+        "A motivating, supportive environment",
+        "Accountability and consistency"
+      ],
+      img: "/assets/images/small-group-training.png",
+      options: ["Small Group"]
     },
     {
       title: "Pilates",
@@ -70,87 +102,18 @@ const Services: React.FC = () => {
       img: "/assets/images/healthy-meal.png"
     },
     {
-      title: "Corporate Wellness",
-      positioning: "Performance for Professionals.",
-      intro: "I offer structured corporate wellness experiences designed to improve posture, reduce workplace fatigue, and enhance physical performance for professionals balancing demanding careers and full lives.",
+      title: "Corporate & Longevity Programs",
+      positioning: "Performance for Professionals. Life-Stage Vitality.",
+      intro: "Structured wellness experiences and longevity protocols designed for professionals and the unique transitions of womanhood. We focus on long-term vitality through evidence-based movement.",
       subheading: "Key Focus Areas",
       bullets: [
         "Mobility and posture refinement",
         "Workplace fatigue reduction",
-        "Injury prevention and sustainable movement habits",
-        "Customised packages for team wellness objectives"
+        "Hormonal balance and metabolic health",
+        "Injury prevention and bone density",
+        "Team wellness and life-stage specific programming"
       ],
       img: "/assets/images/corporate-wellness.jpg"
-    },
-    {
-      title: "Wellness Programs",
-      positioning: "Longevity. Hormonal Health.",
-      intro: "Comprehensive longevity protocols designed for the unique hormonal and physical transitions of womanhood. We focus on long-term vitality through evidence-based movement.",
-      subheading: "Focus Areas",
-      bullets: [
-        "Hormonal balance support",
-        "Menopausal transition mobility",
-        "Bone density and metabolic health",
-        "Life-stage specific programming"
-      ],
-      img: "/assets/images/apparel-identity-1.jpg"
-    },
-    {
-      title: "1:1 Personal Training (In-Person)",
-      positioning: "Focused. Hands-on. High accountability.",
-      intro: "For women who want focused, hands-on coaching and serious accountability. This is my most personalized service, where every session is designed around your goals, your body, and your progression.",
-      subheading: "What you can expect",
-      bullets: [
-        "Fully customized training program",
-        "Proper form correction and technique coaching",
-        "Structured programming",
-        "Progress tracking and goal reviews",
-        "High accountability and consistent support"
-      ],
-      img: "/assets/images/about-squat.jpg"
-    },
-    {
-      title: "Virtual Personal Training",
-      positioning: "Live coaching. Anywhere.",
-      intro: "You receive real-time, face-to-face coaching without being physically present. This offers structure and accountability while allowing location flexibility, best for women who travel or prefer training at home.",
-      subheading: "Includes",
-      bullets: [
-        "Live 1:1 video sessions",
-        "Personalized strength programming",
-        "Real-time feedback",
-        "Progressive tracking",
-        "Scheduled accountability"
-      ],
-      img: "/assets/images/virtual-training.png"
-    },
-    {
-      title: "Online Coaching",
-      positioning: "Structure and results with flexibility.",
-      intro: "Online coaching allows you to train on your schedule while still receiving professional guidance and accountability. You train independently, but you are never alone.",
-      subheading: "What's included",
-      bullets: [
-        "Customized training program",
-        "Weekly check-ins",
-        "Progress tracking",
-        "Form review via video submissions",
-        "Habit and mindset guidance",
-        "Ongoing support and communication"
-      ],
-      img: "/assets/images/online-coaching.png"
-    },
-    {
-      title: "Small Group Training",
-      positioning: "Strength in community. Structure in every session.",
-      intro: "Small group training combines the energy of a group environment with the intention of personal programming. Perfect for women who thrive in community but still want results-driven training.",
-      subheading: "You can expect",
-      bullets: [
-        "Structured strength-focused sessions",
-        "Limited group sizes for quality coaching",
-        "Progressive programming",
-        "A motivating, supportive environment",
-        "Accountability and consistency"
-      ],
-      img: "/assets/images/small-group-training.png"
     }
   ];
 
