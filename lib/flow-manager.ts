@@ -5,9 +5,12 @@ export interface Lead extends LeadReportData { }
 
 const WHATSAPP_NUMBER = '263779261868';
 
-export const buildWhatsAppLink = (lead: Lead, filename: string): string => {
-  const baseMsg = `Hi, I completed the assessment.\n\n*Name:* ${lead.name}\n*Goal:* ${lead.responses.goal}\n*Days per week:* ${lead.responses.daysPerWeek}\n*Recommended plan:* ${lead.result.primaryService}\n\nI’m attaching my PDF report now.`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(baseMsg)}`;
+export const buildWhatsAppMessage = (lead: Lead): string => {
+  return `Hi, I completed the assessment.\n\n*Name:* ${lead.name}\n*Goal:* ${lead.responses.goal}\n*Days per week:* ${lead.responses.daysPerWeek}\n*Recommended plan:* ${lead.result.primaryService}\n\nI’m attaching my PDF report now.`;
+};
+
+export const buildWhatsAppLink = (message: string): string => {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
 
 export const downloadPdf = (bytes: Uint8Array, filename: string): void => {
@@ -65,7 +68,9 @@ export const executeLeadFlow = async (
     await new Promise(r => setTimeout(r, 1200));
 
     onStatusUpdate('opening');
-    const waLink = buildWhatsAppLink(lead, filename);
+    const message = buildWhatsAppMessage(lead);
+    await copyToClipboard(message);
+    const waLink = buildWhatsAppLink(message);
     const win = window.open(waLink, '_blank');
 
     if (!win || win.closed || typeof win.closed === 'undefined') {

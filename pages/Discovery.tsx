@@ -263,14 +263,14 @@ const Discovery: React.FC = () => {
               <div className="space-y-4">
                 <h2 className="text-3xl font-serif text-dark-text">Ready to share?</h2>
                 <p className="text-sm text-dark-secondary/60 leading-relaxed font-light">
-                  Once WhatsApp opens, remember to attach the report I just generated:
+                  I've copied a message to your clipboard for Tsitsi. Once WhatsApp opens:
                 </p>
               </div>
               <div className="space-y-8">
                 {[
-                  { id: "01", title: "Tap (📎) or (+)", sub: "In your message box" },
-                  { id: "02", title: "Select 'Document'", sub: "To find your file" },
-                  { id: "03", title: `Select: ${filename}`, sub: "From your downloads" },
+                  { id: "01", title: "Paste Message", sub: "Tap and hold in the message box, then tap Paste" },
+                  { id: "02", title: "Tap (📎) or (+)", sub: "Next to the message box" },
+                  { id: "03", title: `Select: ${filename}`, sub: "From your recent documents/downloads" },
                   { id: "04", title: "Tap Send", sub: "Tsitsi will get back to you soon" }
                 ].map((s, idx) => (
                   <div key={idx} className="flex gap-6 items-start">
