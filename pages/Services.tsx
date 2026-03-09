@@ -17,7 +17,7 @@ const Services: React.FC = () => {
         "High accountability and consistent support"
       ],
       img: "/assets/images/about-squat.jpg",
-      options: ["1 on One", "In-Person"]
+      options: ["In-Person"]
     },
     {
       title: "Virtual & Online Coaching",

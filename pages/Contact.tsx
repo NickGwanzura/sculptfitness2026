@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-4">
                     <Mail className="w-5 h-5 text-copper" />
-                    <p className="text-lg md:text-xl font-light text-dark-text leading-relaxed lowercase border-b border-copper/10 inline-block w-fit">tsitsiwashe@sculpt263.com</p>
+                    <p className="text-lg md:text-xl font-light text-dark-text leading-relaxed lowercase border-b border-copper/10 inline-block w-fit">tsitsiwashe@tsitsi_washe.com</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <MessageCircle className="w-5 h-5 text-copper" />
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <Instagram className="w-5 h-5 text-copper" />
-                    <a href="https://instagram.com/sculpt263" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl font-light text-dark-text leading-relaxed border-b border-copper/10 inline-block w-fit hover:opacity-70 transition-opacity">@sculpt263</a>
+                    <a href="https://instagram.com/tsitsi_washe" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl font-light text-dark-text leading-relaxed border-b border-copper/10 inline-block w-fit hover:opacity-70 transition-opacity">@sculptfitnesszw</a>
                   </div>
                 </div>
               </div>

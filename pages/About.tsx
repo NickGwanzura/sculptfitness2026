@@ -84,7 +84,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <span className="text-copper font-serif italic text-xl">02</span>
-                  <span>Pilates Instructor</span>
+                  <span>STOTT Trained Pilates Instructor</span>
                 </div>
               </div>
               <p className="text-[10px] uppercase tracking-[0.2em] text-dark-secondary/40 font-bold mt-8">
