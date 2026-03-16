@@ -93,7 +93,7 @@ const Askana: React.FC = () => {
                   src="/assets/images/apparel-identity-2.jpg"
                   alt="Askana philosophy"
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale opacity-90"
+                  className="w-full h-full object-cover object-top grayscale opacity-90"
                 />
               </div>
             </div>

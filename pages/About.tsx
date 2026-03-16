@@ -40,7 +40,7 @@ const About: React.FC = () => {
             <div className="reveal overflow-hidden aspect-[16/9] bg-stone-100 border border-black/5 shadow-2xl rounded-3xl">
               <img
                 src="/assets/images/about-profile.jpg"
-                className="w-full h-full object-cover opacity-90 transition-all duration-[2s]"
+                className="w-full h-full object-cover object-top opacity-90 transition-all duration-[2s]"
                 alt="Tsitsi Maposa - Strength Training"
               />
             </div>
@@ -62,7 +62,7 @@ const About: React.FC = () => {
             <div className="aspect-[3/4] overflow-hidden bg-stone-100 border border-black/5 mb-12 shadow-2xl rounded-3xl">
               <img
                 src="/assets/images/about-lunge.jpg"
-                className="w-full h-full object-cover grayscale opacity-80"
+                className="w-full h-full object-cover object-top grayscale opacity-80"
                 alt="Tsitsi Maposa"
               />
             </div>
