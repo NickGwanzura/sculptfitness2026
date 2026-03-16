@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sculptfitnesszw.com/sitemap.xml

@@ -217,6 +217,7 @@ const Home: React.FC = () => {
                 <img
                   src="/assets/images/about-squat.jpg"
                   alt="Intentional Rhythm"
+                  loading="lazy"
                   className="w-full h-full object-cover grayscale transition-all duration-[3s] hover:scale-105"
                 />
               </div>
@@ -255,6 +256,7 @@ const Home: React.FC = () => {
                   <img
                     src={service.img}
                     alt={service.title}
+                    loading="lazy"
                     className="w-full h-full object-cover grayscale transition-all duration-[2s] group-hover:grayscale-0 group-hover:scale-110"
                   />
                 </div>
@@ -280,6 +282,7 @@ const Home: React.FC = () => {
           <img
             src="/assets/images/private-studio-bg.png"
             alt="Wellness Studio"
+            loading="lazy"
             className="w-full h-full object-cover brightness-[0.6] opacity-90 transition-all duration-[3s]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-text/40 via-transparent to-dark-text/80"></div>

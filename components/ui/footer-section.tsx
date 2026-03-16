@@ -6,11 +6,12 @@ import { Button } from "./button"
 import { Input } from "./input"
 import { Label } from "./label"
 import { Switch } from "./switch"
-import { Instagram, Facebook, Send, Moon, Sun } from "lucide-react"
+import { Instagram, Send, Moon, Sun } from "lucide-react"
 import Logo from "../Logo"
 
 function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(false)
+  const [newsletterEmail, setNewsletterEmail] = React.useState("")
 
   React.useEffect(() => {
     if (isDarkMode) {
@@ -19,6 +20,15 @@ function Footerdemo() {
       document.documentElement.classList.remove("dark")
     }
   }, [isDarkMode])
+
+  const handleNewsletter = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!newsletterEmail) return
+    const text = `Hi! 👋 I'd like to subscribe to Sculpt updates.\n\n📧 ${newsletterEmail}`
+    const url = `https://wa.me/263779261868?text=${encodeURIComponent(text)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
+    setNewsletterEmail("")
+  }
 
   return (
     <footer className="relative border-t border-black/[0.03] bg-white dark:bg-near-black text-dark-text dark:text-ivory transition-colors duration-700">
@@ -32,9 +42,12 @@ function Footerdemo() {
               <p className="text-[13px] text-dark-secondary/60 dark:text-ivory/50 font-light leading-relaxed max-w-xs">
                 Receive intentional movement insights and exclusive updates.
               </p>
-              <form className="relative max-w-xs group">
+              <form className="relative max-w-xs group" onSubmit={handleNewsletter}>
                 <Input
                   type="email"
+                  required
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="EMAIL ADDRESS"
                   className="bg-transparent border-t-0 border-x-0 border-b border-black/10 dark:border-white/10 rounded-none px-0 h-12 text-[10px] tracking-[0.3em] uppercase font-bold focus:border-copper transition-colors placeholder:text-black/20 dark:placeholder:text-white/20"
                 />
@@ -78,9 +91,6 @@ function Footerdemo() {
                 <a href="https://www.instagram.com/tsitsi_washe?igsh=cW8wbWUybWsybTNn&utm_source=qr" target="_blank" rel="noopener noreferrer" className="group">
                   <Instagram className="h-5 w-5 text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors" />
                 </a>
-                <a href="#" className="group">
-                  <Facebook className="h-5 w-5 text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors" />
-                </a>
                 <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="group">
                   <span className="text-[10px] items-center flex font-bold tracking-widest text-dark-text/40 dark:text-ivory/40 group-hover:text-copper transition-colors">WHATSAPP</span>
                 </a>
@@ -108,8 +118,6 @@ function Footerdemo() {
             <a href="https://wa.me/263777816368" target="_blank" rel="noopener noreferrer" className="text-copper/40 hover:text-copper transition-colors">SITE DEVELOPED BY NT GLOBAL SOLUTIONS</a>
           </p>
           <nav className="flex gap-10 text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20">
-            <a href="#" className="hover:text-copper transition-colors">Privacy</a>
-            <a href="#" className="hover:text-copper transition-colors">Terms</a>
             <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="hover:text-copper transition-colors">Contact</a>
           </nav>
         </div>

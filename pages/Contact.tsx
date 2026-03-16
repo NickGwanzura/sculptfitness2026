@@ -4,10 +4,19 @@ import { Instagram, Mail, Phone, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [interest, setInterest] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    const interestLabel = interest || 'General Inquiry';
+    const text = `Hi Tsitsi! 👋\n\nMy name is ${name} and I'd love to connect.\n📧 ${email}\n💬 Interest: ${interestLabel}${message ? `\n\n"${message}"` : ''}\n\nLooking forward to hearing from you!`;
+    const url = `https://wa.me/263779261868?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -78,6 +87,8 @@ const Contact: React.FC = () => {
                       <input
                         required
                         type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all placeholder:text-black/30 font-light text-dark-text"
                         placeholder="Your Full Name"
                       />
@@ -86,17 +97,23 @@ const Contact: React.FC = () => {
                       <input
                         required
                         type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all placeholder:text-black/30 font-light text-dark-text"
                         placeholder="Email Address"
                       />
                     </div>
                     <div className="relative group">
-                      <select className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all font-light text-dark-text appearance-none cursor-pointer">
+                      <select
+                        value={interest}
+                        onChange={(e) => setInterest(e.target.value)}
+                        className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all font-light text-dark-text appearance-none cursor-pointer"
+                      >
                         <option value="">Interested In</option>
-                        <option value="strength">Strength Training</option>
-                        <option value="pilates">Pilates</option>
-                        <option value="nutrition">Nutrition Planning</option>
-                        <option value="apparel">Askana Inquiry</option>
+                        <option value="Strength Training">Strength Training</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Nutrition Planning">Nutrition Planning</option>
+                        <option value="Askana Inquiry">Askana Inquiry</option>
                       </select>
                       <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none opacity-30">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,6 +124,8 @@ const Contact: React.FC = () => {
                     <div className="relative group">
                       <textarea
                         rows={3}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all placeholder:text-black/30 font-light resize-none text-dark-text"
                         placeholder="Briefly share your wellness intentions..."
                       ></textarea>

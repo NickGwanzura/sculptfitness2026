@@ -1,7 +1,22 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const Askana: React.FC = () => {
+  const [waitlistName, setWaitlistName] = useState('');
+  const [waitlistEmail, setWaitlistEmail] = useState('');
+  const [waitlistSize, setWaitlistSize] = useState('');
+  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
+
+  const handleWaitlistSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setWaitlistSubmitted(true);
+
+    const sizeLabel = waitlistSize || 'Not specified';
+    const text = `Hi! 👋 I'd love to join the Askana waitlist.\n\n👤 Name: ${waitlistName}\n📧 Email: ${waitlistEmail}\n👕 Size: ${sizeLabel}\n\nCan't wait for the May 2026 launch! 🔥`;
+    const url = `https://wa.me/263779261868?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="bg-white min-h-screen">
       {/* Apparel Hero */}
@@ -77,6 +92,7 @@ const Askana: React.FC = () => {
                 <img
                   src="/assets/images/apparel-identity-2.jpg"
                   alt="Askana philosophy"
+                  loading="lazy"
                   className="w-full h-full object-cover grayscale opacity-90"
                 />
               </div>
@@ -111,15 +127,38 @@ const Askana: React.FC = () => {
                 We are opening limited access for the May 2026 launch. Enter your details below to secure your spot. <span className="text-copper italic font-medium">Limited quantities available.</span>
               </p>
 
-              <form className="flex flex-col gap-8 max-w-2xl mx-auto" onSubmit={(e) => e.preventDefault()}>
+              {waitlistSubmitted ? (
+                <div className="flex flex-col items-center py-12 animate-fade-up">
+                  <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-10 border border-copper/30">
+                    <svg className="w-7 h-7 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-serif font-light mb-4">You're on the list.</h3>
+                  <p className="text-dark-secondary/50 font-light text-base mb-10">WhatsApp has opened — send your message to confirm your spot.</p>
+                  <button
+                    onClick={() => setWaitlistSubmitted(false)}
+                    className="text-copper text-[10px] font-bold tracking-[0.5em] uppercase border-b border-copper/30 pb-2"
+                  >
+                    Back
+                  </button>
+                </div>
+              ) : (
+              <form className="flex flex-col gap-8 max-w-2xl mx-auto" onSubmit={handleWaitlistSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <input
+                    required
                     type="text"
+                    value={waitlistName}
+                    onChange={(e) => setWaitlistName(e.target.value)}
                     placeholder="FULL NAME"
                     className="bg-white border-b border-black/10 px-8 py-6 text-[10px] tracking-[0.3em] font-bold focus:outline-none focus:border-copper transition-colors text-dark-text uppercase"
                   />
                   <input
+                    required
                     type="email"
+                    value={waitlistEmail}
+                    onChange={(e) => setWaitlistEmail(e.target.value)}
                     placeholder="NAME@EMAIL.COM"
                     className="bg-white border-b border-black/10 px-8 py-6 text-[10px] tracking-[0.3em] font-bold focus:outline-none focus:border-copper transition-colors text-dark-text uppercase"
                   />
@@ -127,18 +166,19 @@ const Askana: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <select
+                    value={waitlistSize}
+                    onChange={(e) => setWaitlistSize(e.target.value)}
                     className="bg-white border-b border-black/10 px-8 py-6 text-[10px] tracking-[0.3em] font-bold focus:outline-none focus:border-copper transition-colors text-dark-text uppercase appearance-none"
-                    defaultValue=""
                   >
                     <option value="" disabled>PREFERRED SIZE</option>
-                    <option value="xs">Extra Small (XS)</option>
-                    <option value="s">Small (S)</option>
-                    <option value="m">Medium (M)</option>
-                    <option value="l">Large (L)</option>
-                    <option value="xl">Extra Large (XL)</option>
+                    <option value="Extra Small (XS)">Extra Small (XS)</option>
+                    <option value="Small (S)">Small (S)</option>
+                    <option value="Medium (M)">Medium (M)</option>
+                    <option value="Large (L)">Large (L)</option>
+                    <option value="Extra Large (XL)">Extra Large (XL)</option>
                   </select>
 
-                  <button className="bg-copper text-white px-16 py-6 text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-near-black hover:text-white transition-all shadow-lg shadow-copper/10">
+                  <button type="submit" className="bg-copper text-white px-16 py-6 text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-near-black hover:text-white transition-all shadow-lg shadow-copper/10">
                     Secure My Access
                   </button>
                 </div>
@@ -147,6 +187,7 @@ const Askana: React.FC = () => {
                   By joining, you agree to receive early access notifications.
                 </p>
               </form>
+              )}
             </div>
           </div>
         </div>
