@@ -283,7 +283,8 @@ const Home: React.FC = () => {
           <img decoding="async"
             src="/assets/images/private-studio-bg.webp"
             alt="Wellness Studio"
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
             className="w-full h-full object-cover brightness-[0.6] opacity-90 transition-all duration-[3s]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-dark-text/40 via-transparent to-dark-text/80"></div>
