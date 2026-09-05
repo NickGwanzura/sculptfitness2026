@@ -34,10 +34,29 @@ const ScrollEffects = () => {
       });
     }, observerOptions);
 
-    const elements = document.querySelectorAll('.reveal');
-    elements.forEach(el => observer.observe(el));
+    // Routes are lazy-loaded, so the first effect pass can run before the
+    // page's reveal elements exist. Observe current and newly-mounted nodes.
+    const observeReveals = () => {
+      document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
+    };
+    observeReveals();
+    const mutationObserver = new MutationObserver(observeReveals);
+    mutationObserver.observe(document.getElementById('main-content') ?? document.body, {
+      childList: true,
+      subtree: true,
+    });
 
-    return () => observer.disconnect();
+    // Never leave route content hidden if an observer is interrupted by a
+    // browser/scroll implementation. This also prevents a blank page section.
+    const revealFallback = window.setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.active)').forEach(el => el.classList.add('active'));
+    }, 1800);
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+      window.clearTimeout(revealFallback);
+    };
   }, [pathname]);
 
   return null;

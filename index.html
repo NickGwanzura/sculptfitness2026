@@ -150,6 +150,26 @@
       transform: translateY(0);
     }
 
+    /* Keep supporting copy legible across the light theme. Several legacy
+       utility combinations used very low-opacity gray text, which became
+       unreadable against white backgrounds. */
+    [class*="text-dark-secondary"],
+    [class*="text-dark-text/"],
+    [class*="text-black/"] {
+      color: #1B1B1B !important;
+      opacity: 1 !important;
+    }
+
+    p.opacity-30,
+    p.opacity-40,
+    p.opacity-50,
+    p.opacity-60,
+    label.opacity-40,
+    label.opacity-70 {
+      opacity: 1 !important;
+      color: #1B1B1B !important;
+    }
+
     ::-webkit-scrollbar {
       width: 4px;
     }

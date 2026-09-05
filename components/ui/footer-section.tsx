@@ -39,7 +39,7 @@ function Footerdemo() {
           <div className="space-y-10">
             <Logo variant="dark" className="h-24 md:h-32 justify-start dark:invert opacity-80" />
             <div className="space-y-6">
-              <p className="text-[13px] text-dark-secondary/60 dark:text-ivory/50 font-light leading-relaxed max-w-xs">
+              <p className="text-[13px] text-dark-text dark:text-ivory font-light leading-relaxed max-w-xs">
                 Receive intentional movement insights and exclusive updates.
               </p>
               <form className="relative max-w-xs group" onSubmit={handleNewsletter}>
@@ -64,7 +64,7 @@ function Footerdemo() {
           {/* Main Navigation */}
           <div>
             <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Explore</h3>
-            <nav className="flex flex-col space-y-5 text-[11px] tracking-[0.2em] uppercase font-bold text-dark-secondary/80 dark:text-ivory/70">
+            <nav className="flex flex-col space-y-5 text-[11px] tracking-[0.2em] uppercase font-bold text-dark-text dark:text-ivory">
               <a href="#/" className="hover:text-copper transition-colors">Home</a>
               <a href="#/about" className="hover:text-copper transition-colors">The Architect</a>
               <a href="#/services" className="hover:text-copper transition-colors">Offerings</a>
@@ -78,7 +78,7 @@ function Footerdemo() {
           <div className="space-y-12">
             <div>
               <h3 className="mb-10 text-[10px] tracking-[0.4em] uppercase font-bold text-copper/50">Location</h3>
-              <div className="space-y-6 text-sm font-light text-dark-secondary dark:text-ivory/60 leading-relaxed">
+              <div className="space-y-6 text-sm font-light text-dark-text dark:text-ivory leading-relaxed">
                 <p>Harare, Zimbabwe</p>
                 <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="block border-b border-copper/10 pb-1 w-fit hover:border-copper transition-colors">
                   WhatsApp & Calls
@@ -96,7 +96,7 @@ function Footerdemo() {
                 </a>
               </div>
 
-              <div className="flex items-center space-x-3 opacity-40 hover:opacity-100 transition-opacity">
+              <div className="flex items-center space-x-3 hover:opacity-100 transition-opacity">
                 <Sun className="h-3.5 w-3.5 text-copper" />
                 <Switch
                   id="dark-mode"
@@ -112,12 +112,12 @@ function Footerdemo() {
 
         {/* Legal Footer */}
         <div className="mt-24 pt-12 border-t border-black/[0.03] dark:border-white/[0.03] flex flex-col md:flex-row items-center justify-between gap-8">
-          <p className="text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20 flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+          <p className="text-[9px] tracking-[0.4em] uppercase font-bold text-dark-text dark:text-ivory flex flex-col md:flex-row gap-4 md:gap-8 items-center">
             <span>© 2025 SCULPT WELLNESS. EST. HARARE.</span>
             <span className="hidden md:block opacity-30">|</span>
-            <a href="https://spiritusglobal.tech" target="_blank" rel="noopener noreferrer" className="text-copper/40 hover:text-copper transition-colors">SITE DEVELOPED BY SPIRITUS SYSTEMS</a>
+            <a href="https://spiritusglobal.tech" target="_blank" rel="noopener noreferrer" className="text-dark-text dark:text-ivory hover:text-copper transition-colors">SITE DEVELOPED BY SPIRITUS SYSTEMS</a>
           </p>
-          <nav className="flex gap-10 text-[9px] tracking-[0.4em] uppercase font-bold text-dark-secondary/30 dark:text-ivory/20">
+          <nav className="flex gap-10 text-[9px] tracking-[0.4em] uppercase font-bold text-dark-text dark:text-ivory">
             <a href="https://wa.me/263779261868" target="_blank" rel="noopener noreferrer" className="hover:text-copper transition-colors">Contact</a>
           </nav>
         </div>
