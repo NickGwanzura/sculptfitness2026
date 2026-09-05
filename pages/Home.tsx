@@ -256,7 +256,8 @@ const Home: React.FC = () => {
                   <img decoding="async"
                     src={service.img}
                     alt={service.title}
-                    loading="lazy"
+                    loading={idx < 3 ? "eager" : "lazy"}
+                    fetchPriority={idx < 3 ? "high" : "auto"}
                     className="w-full h-full object-cover object-top grayscale transition-all duration-[2s] group-hover:grayscale-0 group-hover:scale-110"
                   />
                 </div>

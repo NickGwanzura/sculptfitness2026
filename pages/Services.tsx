@@ -144,7 +144,7 @@ const Services: React.FC = () => {
           <article key={index} className={`service-block flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-24 items-center`}>
             <div className="w-full lg:w-1/2 reveal">
               <div className="aspect-[4/5] bg-stone-100 border border-black/5 overflow-hidden shadow-2xl group rounded-3xl">
-                <img loading="lazy" decoding="async"
+                <img loading={index < 2 ? "eager" : "lazy"} fetchPriority={index < 2 ? "high" : "auto"} decoding="async"
                   src={service.img}
                   alt={service.title}
                   className="w-full h-full object-cover object-top transition-all duration-[3s] group-hover:scale-105 opacity-60 grayscale group-hover:opacity-90 group-hover:grayscale-0"
