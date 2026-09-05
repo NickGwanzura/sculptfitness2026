@@ -21,7 +21,7 @@ const About: React.FC = () => {
         <div className="mb-24 md:mb-48 reveal group overflow-hidden">
           <div className="relative aspect-[4/5] md:aspect-[16/9] overflow-hidden bg-stone-100 border border-black/5 shadow-2xl rounded-3xl transition-transform duration-[3s] group-hover:scale-105">
             <img loading="lazy" decoding="async"
-              src="/assets/images/about-empower.jpg"
+              src="/assets/images/about-empower.webp"
               className="w-full h-full object-cover transition-all duration-[2s]"
               alt="Empowering women across all seasons of life"
             />
@@ -39,7 +39,7 @@ const About: React.FC = () => {
           <div className="lg:col-span-7 space-y-20">
             <div className="reveal overflow-hidden aspect-[16/9] bg-stone-100 border border-black/5 shadow-2xl rounded-3xl">
               <img loading="lazy" decoding="async"
-                src="/assets/images/about-profile.jpg"
+                src="/assets/images/about-profile.webp"
                 className="w-full h-full object-cover object-top opacity-90 transition-all duration-[2s]"
                 alt="Tsitsi Maposa - Strength Training"
               />
@@ -61,7 +61,7 @@ const About: React.FC = () => {
           <div className="lg:col-span-5 reveal" style={{ transitionDelay: '400ms' }}>
             <div className="aspect-[3/4] overflow-hidden bg-stone-100 border border-black/5 mb-12 shadow-2xl rounded-3xl">
               <img loading="lazy" decoding="async"
-                src="/assets/images/about-lunge.jpg"
+                src="/assets/images/about-lunge.webp"
                 className="w-full h-full object-cover object-top grayscale opacity-80"
                 alt="Tsitsi Maposa"
               />
@@ -240,7 +240,7 @@ const About: React.FC = () => {
 
               <div className="aspect-[1.414/1] bg-stone-50 border border-black/5 shadow-2xl rounded-2xl overflow-hidden relative">
                 <img loading="lazy" decoding="async"
-                  src="/assets/images/ace-certificate.jpg"
+                  src="/assets/images/ace-certificate.webp"
                   alt="ACE Certified Personal Trainer"
                   className="w-full h-full object-contain select-none"
                   onContextMenu={(e) => e.preventDefault()}

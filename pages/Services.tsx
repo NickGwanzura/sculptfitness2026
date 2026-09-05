@@ -16,7 +16,7 @@ const Services: React.FC = () => {
         "Progress tracking and goal reviews",
         "High accountability and consistent support"
       ],
-      img: "/assets/images/about-squat.jpg",
+      img: "/assets/images/about-squat.webp",
       options: ["In-Person"]
     },
     {
@@ -32,7 +32,7 @@ const Services: React.FC = () => {
         "Habit and mindset guidance",
         "Ongoing support and communication"
       ],
-      img: "/assets/images/virtual-training.png",
+      img: "/assets/images/virtual-training.webp",
       options: ["Virtual", "Online"]
     },
     {
@@ -47,7 +47,7 @@ const Services: React.FC = () => {
         "A motivating, supportive environment",
         "Accountability and consistency"
       ],
-      img: "/assets/images/small-group-training.png",
+      img: "/assets/images/small-group-training.webp",
       options: ["Small Group"]
     },
     {
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
         "Injury prevention & recovery",
         "Muscle definition & sculpting"
       ],
-      img: "/assets/images/about-lunge.jpg",
+      img: "/assets/images/about-lunge.webp",
       extraSections: [
         {
           title: "Studio-Based Pilates",
@@ -98,7 +98,7 @@ const Services: React.FC = () => {
         "Gut vitality and inflammation reduction",
         "Seamless integration into busy professional routines"
       ],
-      img: "/assets/images/healthy-meal.png"
+      img: "/assets/images/healthy-meal.webp"
     },
     {
       title: "Corporate & Longevity Programs",
@@ -112,7 +112,7 @@ const Services: React.FC = () => {
         "Injury prevention and bone density",
         "Team wellness and life-stage specific programming"
       ],
-      img: "/assets/images/corporate-wellness.jpg"
+      img: "/assets/images/corporate-wellness.webp"
     }
   ];
 

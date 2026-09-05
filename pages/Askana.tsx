@@ -22,12 +22,12 @@ const Askana: React.FC = () => {
       {/* Apparel Hero */}
       <section
         className="h-[80vh] min-h-[600px] relative flex flex-col items-center justify-center text-center overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/images/hero-plank.jpg')" }}
+        style={{ backgroundImage: "url('/assets/images/hero-plank.webp')" }}
       >
         <div className="absolute inset-0 bg-near-black/60"></div>
         <div className="relative z-10 w-full max-w-4xl px-8 animate-fade-up flex flex-col items-center">
           <img loading="lazy" decoding="async"
-            src="/assets/logos/askana-logo-raw.png"
+            src="/assets/logos/askana-logo-raw.webp"
             alt="ASKANA Logo"
             className="w-48 md:w-64 h-auto object-contain mt-32 md:mt-24 mb-10 md:mb-20 drop-shadow-2xl brightness-0 invert"
           />
@@ -90,7 +90,7 @@ const Askana: React.FC = () => {
             <div className="reveal">
               <div className="aspect-[4/5] bg-stone-100 rounded-3xl overflow-hidden shadow-2xl border border-black/5">
                 <img decoding="async"
-                  src="/assets/images/apparel-identity-2.jpg"
+                  src="/assets/images/apparel-identity-2.webp"
                   alt="Askana philosophy"
                   loading="lazy"
                   className="w-full h-full object-cover object-top grayscale opacity-90"

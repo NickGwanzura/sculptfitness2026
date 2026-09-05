@@ -5,18 +5,18 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Logo from '../components/Logo';
 
 const SLIDES = [
-  "/images/hero/slide-01.jpg",
-  "/images/hero/slide-02.jpg",
-  "/images/hero/slide-03.jpg",
-  "/images/hero/slide-04.jpg",
-  "/images/hero/slide-05.jpg"
+  "/images/hero/slide-01.webp",
+  "/images/hero/slide-02.webp",
+  "/images/hero/slide-03.webp",
+  "/images/hero/slide-04.webp",
+  "/images/hero/slide-05.webp"
 ];
 
 // High-quality brand assets from Google Drive
 const FALLBACK_SLIDES = [
-  "/assets/images/hero-plank.jpg",
-  "/assets/images/apparel-wrapper.jpg",
-  "/assets/images/apparel-identity-2.jpg"
+  "/assets/images/hero-plank.webp",
+  "/assets/images/apparel-wrapper.webp",
+  "/assets/images/apparel-identity-2.webp"
 ];
 
 const Home: React.FC = () => {
@@ -77,47 +77,47 @@ const Home: React.FC = () => {
     {
       title: "Strength Training",
       desc: "One-on-one sessions prioritizing anatomy, precision, and foundational strength for the decades ahead.",
-      img: "/assets/images/about-lunge.jpg",
+      img: "/assets/images/about-lunge.webp",
     },
     {
       title: "Pilates",
       desc: "A blend of mindful movement and functional mobility to foster deep coordination and spinal resilience.",
-      img: "/assets/images/about-squat.jpg",
+      img: "/assets/images/about-squat.webp",
     },
     {
       title: "Wellness Nutrition",
       desc: "Culturally resonant, nutrient-dense planning tailored to the cognitive and physical demands of high-performance living.",
-      img: "/assets/images/healthy-meal.png",
+      img: "/assets/images/healthy-meal.webp",
     },
     {
       title: "Wellness Programs",
       desc: "Comprehensive longevity protocols designed for the unique hormonal and physical transitions of womanhood.",
-      img: "/assets/images/apparel-identity-1.jpg",
+      img: "/assets/images/apparel-identity-1.webp",
     },
     {
       title: "Corporate Wellness",
       desc: "Performance for professionals. Mobility, posture refinement, and sustainable movement habits for the workplace.",
-      img: "/assets/images/corporate-wellness.jpg",
+      img: "/assets/images/corporate-wellness.webp",
     },
     {
       title: "1:1 Personal Training (In-Person)",
       desc: "Focused, hands-on coaching and serious accountability for women ready to build lasting strength.",
-      img: "/assets/images/about-squat.jpg",
+      img: "/assets/images/about-squat.webp",
     },
     {
       title: "Virtual Training",
       desc: "Real-time, face-to-face coaching from anywhere. Location flexibility without sacrificing structure.",
-      img: "/assets/images/virtual-training.png",
+      img: "/assets/images/virtual-training.webp",
     },
     {
       title: "Online Coaching",
       desc: "Professional guidance and accountability on your schedule, wherever you are in the world.",
-      img: "/assets/images/online-coaching.png",
+      img: "/assets/images/online-coaching.webp",
     },
     {
       title: "Small Group Training",
       desc: "Combining the energy of a community with the intention of results-driven personal programming.",
-      img: "/assets/images/small-group-training.png",
+      img: "/assets/images/small-group-training.webp",
     }
   ];
 
@@ -215,7 +215,7 @@ const Home: React.FC = () => {
             <div className="reveal order-1 lg:order-2">
               <div className="aspect-[3/4] md:aspect-square bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5 rounded-3xl">
                 <img decoding="async"
-                  src="/assets/images/about-squat.jpg"
+                  src="/assets/images/about-squat.webp"
                   alt="Intentional Rhythm"
                   loading="lazy"
                   className="w-full h-full object-cover object-top grayscale transition-all duration-[3s] hover:scale-105"
@@ -280,7 +280,7 @@ const Home: React.FC = () => {
         {/* Background Image & Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img decoding="async"
-            src="/assets/images/private-studio-bg.png"
+            src="/assets/images/private-studio-bg.webp"
             alt="Wellness Studio"
             loading="lazy"
             className="w-full h-full object-cover brightness-[0.6] opacity-90 transition-all duration-[3s]"
