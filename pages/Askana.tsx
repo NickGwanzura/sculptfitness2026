@@ -26,7 +26,7 @@ const Askana: React.FC = () => {
       >
         <div className="absolute inset-0 bg-near-black/60"></div>
         <div className="relative z-10 w-full max-w-4xl px-8 animate-fade-up flex flex-col items-center">
-          <img
+          <img loading="lazy" decoding="async"
             src="/assets/logos/askana-logo-raw.png"
             alt="ASKANA Logo"
             className="w-48 md:w-64 h-auto object-contain mt-32 md:mt-24 mb-10 md:mb-20 drop-shadow-2xl brightness-0 invert"
@@ -89,7 +89,7 @@ const Askana: React.FC = () => {
             </div>
             <div className="reveal">
               <div className="aspect-[4/5] bg-stone-100 rounded-3xl overflow-hidden shadow-2xl border border-black/5">
-                <img
+                <img decoding="async"
                   src="/assets/images/apparel-identity-2.jpg"
                   alt="Askana philosophy"
                   loading="lazy"

@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-4">
                     <Mail className="w-5 h-5 text-copper" />
-                    <p className="text-lg md:text-xl font-light text-dark-text leading-relaxed lowercase border-b border-copper/10 inline-block w-fit">tsitsiwashe@tsitsi_washe.com</p>
+                    <a href="mailto:tsitsiwashe@tsitsi_washe.com" className="text-lg md:text-xl font-light text-dark-text leading-relaxed lowercase border-b border-copper/10 inline-block w-fit hover:text-copper transition-colors">tsitsiwashe@tsitsi_washe.com</a>
                   </div>
                   <div className="flex items-center gap-4">
                     <MessageCircle className="w-5 h-5 text-copper" />
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
           <div className="reveal mt-16 md:mt-0" style={{ transitionDelay: '300ms' }}>
             <div className="bg-stone-50 p-8 md:p-20 border border-black/5 shadow-2xl backdrop-blur-sm rounded-[1px]">
               {submitted ? (
-                <div className="text-center py-16 md:py-24 animate-fade-up">
+                <div className="text-center py-16 md:py-24 animate-fade-up" role="status" aria-live="polite">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-12 md:mb-16 border border-copper/30">
                     <svg className="w-6 h-6 md:w-8 md:h-8 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 13l4 4L19 7" />
@@ -84,7 +84,9 @@ const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-12 md:space-y-16">
                   <div className="space-y-12 md:space-y-16">
                     <div className="relative group">
+                      <label htmlFor="contact-name" className="block text-xs uppercase tracking-widest text-dark-secondary/70 mb-2">Your Full Name</label>
                       <input
+                        id="contact-name"
                         required
                         type="text"
                         value={name}
@@ -94,7 +96,9 @@ const Contact: React.FC = () => {
                       />
                     </div>
                     <div className="relative group">
+                      <label htmlFor="contact-email" className="block text-xs uppercase tracking-widest text-dark-secondary/70 mb-2">Email Address</label>
                       <input
+                        id="contact-email"
                         required
                         type="email"
                         value={email}
@@ -104,7 +108,9 @@ const Contact: React.FC = () => {
                       />
                     </div>
                     <div className="relative group">
+                      <label htmlFor="contact-interest" className="block text-xs uppercase tracking-widest text-dark-secondary/70 mb-2">Interested In</label>
                       <select
+                        id="contact-interest"
                         value={interest}
                         onChange={(e) => setInterest(e.target.value)}
                         className="w-full bg-transparent border-b border-black/20 focus:border-copper py-6 text-lg focus:outline-none transition-all font-light text-dark-text appearance-none cursor-pointer"
@@ -122,7 +128,9 @@ const Contact: React.FC = () => {
                       </div>
                     </div>
                     <div className="relative group">
+                      <label htmlFor="contact-message" className="block text-xs uppercase tracking-widest text-dark-secondary/70 mb-2">Wellness intentions</label>
                       <textarea
+                        id="contact-message"
                         rows={3}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}

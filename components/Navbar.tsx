@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Facebook, MapPin, X, Menu } from 'lucide-react';
 import Logo from './Logo';
@@ -7,6 +7,7 @@ import Logo from './Logo';
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const isHeroPage = location.pathname === '/' || location.pathname === '/askana';
@@ -23,6 +24,17 @@ const Navbar: React.FC = () => {
     } else {
       document.body.style.overflow = 'unset';
     }
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    const firstLink = mobileMenuRef.current?.querySelector<HTMLElement>('a');
+    firstLink?.focus();
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isMobileMenuOpen]);
 
   const navLinks = [
@@ -94,9 +106,11 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden relative z-[1100] w-10 h-10 flex items-center justify-center focus:outline-none"
+          className="lg:hidden relative z-[1100] w-11 h-11 flex items-center justify-center"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
           <div className="w-5 h-4 flex flex-col justify-between items-end">
             <span className={`h-[1px] transition-all duration-500 ${isMobileMenuOpen ? 'bg-dark-text w-5 rotate-45 translate-y-[7.5px]' : `${isDarkText ? 'bg-dark-text' : 'bg-white'} w-5`}`}></span>
@@ -107,8 +121,17 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-[1050] transition-all duration-[800ms] ease-expo border-l border-white/20 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-        }`}>
+      <div
+        id="mobile-navigation"
+        ref={mobileMenuRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        aria-hidden={!isMobileMenuOpen}
+        inert={!isMobileMenuOpen ? true : undefined}
+        className={`fixed inset-0 bg-white z-[1050] transition-all duration-[800ms] ease-expo border-l border-white/20 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+          }`}
+      >
         <div className="h-full flex flex-col pt-40 pb-12 px-10 md:px-20">
           <div className="flex flex-col items-start space-y-8">
             {navLinks.map((link, idx) => (

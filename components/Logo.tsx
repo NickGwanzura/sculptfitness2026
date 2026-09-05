@@ -24,7 +24,7 @@ const Logo: React.FC<LogoProps> = ({ className = "h-12", variant = 'auto' }) => 
 
   return (
     <div className={`flex items-center justify-center transition-all duration-1000 ${className}`}>
-      <img
+      <img decoding="async"
         src={logoSrc}
         alt="SCULPT"
         className={`h-full w-auto object-contain pointer-events-none select-none transition-all duration-700 ${filterClass}`}

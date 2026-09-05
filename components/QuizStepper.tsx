@@ -46,6 +46,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
 
   const SelectionCard = ({ selected, onClick, label, icon: Icon, description }: any) => (
     <button
+      type="button"
       onClick={onClick}
       className={cn(
         "group relative flex flex-col items-start p-5 text-left border transition-all duration-500 rounded-xl overflow-hidden min-h-[100px]",
@@ -89,16 +90,16 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
             <h3 className="text-3xl font-serif text-dark-text">A little about you</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-3 md:col-span-2">
-                <Label className="text-xs uppercase tracking-widest opacity-70">Your Name</Label>
-                <Input value={formData.name} onChange={e => updateField('name', e.target.value)} placeholder="Jane Doe" className="h-16 bg-stone-50 border-none rounded-xl px-6 focus:ring-1 focus:ring-copper/20" />
+                <Label htmlFor="quiz-name" className="text-xs uppercase tracking-widest opacity-70">Your Name</Label>
+                <Input id="quiz-name" value={formData.name} onChange={e => updateField('name', e.target.value)} placeholder="Jane Doe" className="h-16 bg-stone-50 border-none rounded-xl px-6 focus:ring-1 focus:ring-copper/20" />
               </div>
               <div className="space-y-3">
-                <Label className="text-xs uppercase tracking-widest opacity-70">Email</Label>
-                <Input value={formData.email} onChange={e => updateField('email', e.target.value)} placeholder="jane@example.com" className="h-16 bg-stone-50 border-none rounded-xl px-6 focus:ring-1 focus:ring-copper/20" />
+                <Label htmlFor="quiz-email" className="text-xs uppercase tracking-widest opacity-70">Email</Label>
+                <Input id="quiz-email" type="email" value={formData.email} onChange={e => updateField('email', e.target.value)} placeholder="jane@example.com" className="h-16 bg-stone-50 border-none rounded-xl px-6 focus:ring-1 focus:ring-copper/20" />
               </div>
               <div className="space-y-3">
-                <Label className="text-xs uppercase tracking-widest opacity-70">Phone (WhatsApp)</Label>
-                <Input value={formData.phone} onChange={e => updateField('phone', e.target.value)} placeholder="+263..." className="h-16 bg-stone-50 border-none rounded-xl px-6 focus:ring-1 focus:ring-copper/20" />
+                <Label htmlFor="quiz-phone" className="text-xs uppercase tracking-widest opacity-70">Phone (WhatsApp)</Label>
+                <Input id="quiz-phone" type="tel" value={formData.phone} onChange={e => updateField('phone', e.target.value)} placeholder="+263..." className="h-16 bg-stone-50 border-none rounded-xl px-6 focus:ring-1 focus:ring-copper/20" />
               </div>
             </div>
           </div>
@@ -139,7 +140,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">How many days per week can you realistically exercise?</Label>
                 <div className="grid grid-cols-4 gap-2">
                   {['0-1', '2', '3', '4+'].map(val => (
-                    <button key={val} onClick={() => updateField('daysPerWeek', val)} className={cn("py-5 border text-xs font-bold rounded-xl", formData.daysPerWeek === val ? "bg-copper text-white border-copper" : "border-black/5")}>{val}</button>
+                    <button type="button" key={val} onClick={() => updateField('daysPerWeek', val)} className={cn("py-5 border text-xs font-bold rounded-xl", formData.daysPerWeek === val ? "bg-copper text-white border-copper" : "border-black/5")}>{val}</button>
                   ))}
                 </div>
                 <p className="text-[10px] opacity-40 italic">Be honest — this helps us create a plan you can actually stick to.</p>
@@ -149,7 +150,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">Where do you live?</Label>
                 <div className="grid grid-cols-2 gap-2">
                   {['Harare', 'Elsewhere'].map(loc => (
-                    <button key={loc} onClick={() => updateField('location', loc)} className={cn("py-5 border text-xs font-bold rounded-xl uppercase", formData.location === loc ? "bg-near-black text-white" : "border-black/5")}>{loc}</button>
+                    <button type="button" key={loc} onClick={() => updateField('location', loc)} className={cn("py-5 border text-xs font-bold rounded-xl uppercase", formData.location === loc ? "bg-near-black text-white" : "border-black/5")}>{loc}</button>
                   ))}
                 </div>
               </div>
@@ -167,7 +168,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                   <Label className="text-xs uppercase tracking-widest opacity-70">Would you like the coach to come to you?</Label>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                     {['Yes, come to me', 'I can come to the studio', 'Either is fine'].map(opt => (
-                      <button key={opt} onClick={() => updateField('trainerLocation', opt)} className={cn("py-5 px-4 border text-xs font-bold rounded-xl uppercase", formData.trainerLocation === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
+                      <button type="button" key={opt} onClick={() => updateField('trainerLocation', opt)} className={cn("py-5 px-4 border text-xs font-bold rounded-xl uppercase", formData.trainerLocation === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
                     ))}
                   </div>
                 </div>
@@ -177,7 +178,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">How much support do you need?</Label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                   {['Strong support', 'Moderate help', "I'm self-driven"].map(opt => (
-                    <button key={opt} onClick={() => updateField('accountability', opt)} className={cn("py-5 border text-xs font-bold rounded-xl uppercase", formData.accountability === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
+                    <button type="button" key={opt} onClick={() => updateField('accountability', opt)} className={cn("py-5 border text-xs font-bold rounded-xl uppercase", formData.accountability === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
                   ))}
                 </div>
               </div>
@@ -194,7 +195,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">Exercise Experience</Label>
                 <div className="grid grid-cols-1 gap-2">
                   {['Beginner', 'I know a bit', "I'm experienced"].map(lvl => (
-                    <button key={lvl} onClick={() => updateField('experience', lvl)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.experience === lvl ? "bg-copper text-white" : "border-black/5")}>{lvl}</button>
+                    <button type="button" key={lvl} onClick={() => updateField('experience', lvl)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.experience === lvl ? "bg-copper text-white" : "border-black/5")}>{lvl}</button>
                   ))}
                 </div>
               </div>
@@ -202,7 +203,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">Interested in Pilates?</Label>
                 <div className="grid grid-cols-1 gap-2">
                   {['Yes', 'Maybe', 'No'].map(opt => (
-                    <button key={opt} onClick={() => updateField('pilatesInterest', opt)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.pilatesInterest === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
+                    <button type="button" key={opt} onClick={() => updateField('pilatesInterest', opt)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.pilatesInterest === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
                   ))}
                 </div>
               </div>
@@ -219,7 +220,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">Any injuries or aches?</Label>
                 <div className="grid grid-cols-1 gap-2">
                   {['No', 'Yes, a little', 'Yes, currently hurting'].map(opt => (
-                    <button key={opt} onClick={() => updateField('injuryStatus', opt)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.injuryStatus === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
+                    <button type="button" key={opt} onClick={() => updateField('injuryStatus', opt)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.injuryStatus === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
                   ))}
                 </div>
               </div>
@@ -227,7 +228,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
                 <Label className="text-xs uppercase tracking-widest opacity-70">Which format do you prefer?</Label>
                 <div className="grid grid-cols-1 gap-2">
                   {['1-on-1', 'Small group', 'Independent', 'Not sure'].map(opt => (
-                    <button key={opt} onClick={() => updateField('format', opt)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.format === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
+                    <button type="button" key={opt} onClick={() => updateField('format', opt)} className={cn("py-5 px-6 text-left border rounded-xl text-xs font-bold uppercase", formData.format === opt ? "bg-copper text-white" : "border-black/5")}>{opt}</button>
                   ))}
                 </div>
               </div>
@@ -253,8 +254,8 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
               We've created your personal recommendation. Secure your report below to see our plan for you.
             </p>
             <div className="flex items-start gap-4 p-6 bg-stone-50 rounded-xl border border-black/5 text-left mt-8">
-              <input type="checkbox" checked={formData.permissions} onChange={e => updateField('permissions', e.target.checked)} className="mt-1 w-5 h-5 accent-copper cursor-pointer" />
-              <span className="text-[11px] leading-relaxed text-dark-secondary/60">I'm happy for SCULPT to contact me about my results.</span>
+              <input id="quiz-permissions" type="checkbox" checked={formData.permissions} onChange={e => updateField('permissions', e.target.checked)} className="mt-1 w-5 h-5 accent-copper cursor-pointer" />
+              <label htmlFor="quiz-permissions" className="text-[11px] leading-relaxed text-dark-secondary/70">I'm happy for SCULPT to contact me about my results.</label>
             </div>
             <div className="pt-10">
               <Button
@@ -288,7 +289,7 @@ const QuizStepper: React.FC<{ onComplete: (data: QuizData) => void }> = ({ onCom
 
       {step > 0 && step < 7 && (
         <div className="flex justify-between items-center pt-16 border-t border-black/5 mt-16">
-          <button onClick={prevStep} className="flex items-center text-[10px] tracking-widest uppercase font-bold opacity-30 hover:opacity-100 transition-opacity">
+          <button type="button" onClick={prevStep} className="flex items-center text-[10px] tracking-widest uppercase font-bold opacity-30 hover:opacity-100 transition-opacity">
             <ChevronLeft className="w-4 h-4 mr-2" /> Back
           </button>
           <Button

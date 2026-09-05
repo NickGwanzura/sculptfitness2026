@@ -139,7 +139,7 @@ const Home: React.FC = () => {
               className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
                 }`}
             >
-              <img
+              <img loading="eager" fetchPriority="high" decoding="async"
                 src={slide}
                 alt=""
                 className={`h-full w-full object-cover grayscale-[10%] brightness-[0.75] transition-transform duration-[10s] ease-linear ${index === currentSlide ? 'scale-105' : 'scale-100'}`}
@@ -214,7 +214,7 @@ const Home: React.FC = () => {
             </div>
             <div className="reveal order-1 lg:order-2">
               <div className="aspect-[3/4] md:aspect-square bg-stone-100 overflow-hidden relative shadow-2xl shadow-copper/5 rounded-3xl">
-                <img
+                <img decoding="async"
                   src="/assets/images/about-squat.jpg"
                   alt="Intentional Rhythm"
                   loading="lazy"
@@ -253,7 +253,7 @@ const Home: React.FC = () => {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-copper scale-x-0 transition-transform duration-700 group-hover:scale-x-100 origin-left"></div>
 
                 <div className="aspect-[3/4] mb-10 overflow-hidden rounded-2xl bg-stone-100 border border-black/5">
-                  <img
+                  <img decoding="async"
                     src={service.img}
                     alt={service.title}
                     loading="lazy"
@@ -279,7 +279,7 @@ const Home: React.FC = () => {
       <section className="relative py-20 md:py-80 text-center overflow-hidden bg-stone-100">
         {/* Background Image & Gradient Overlay */}
         <div className="absolute inset-0 z-0">
-          <img
+          <img decoding="async"
             src="/assets/images/private-studio-bg.png"
             alt="Wellness Studio"
             loading="lazy"
