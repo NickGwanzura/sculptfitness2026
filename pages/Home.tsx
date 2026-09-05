@@ -229,7 +229,7 @@ const Home: React.FC = () => {
       {/* Premium Service Cards Section */}
       <section className="py-20 md:py-52 bg-white relative overflow-hidden">
         {/* Background Watermark */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-serif text-black/[0.02] select-none pointer-events-none tracking-tighter leading-none whitespace-nowrap hidden lg:block uppercase">
+        <div className="watermark absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-serif text-black/[0.02] select-none pointer-events-none tracking-tighter leading-none whitespace-nowrap hidden lg:block uppercase">
           Sculpt Wellness
         </div>
         <div className="max-w-screen-xl mx-auto px-6 md:px-10 relative z-10">
